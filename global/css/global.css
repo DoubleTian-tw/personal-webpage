@@ -35,7 +35,7 @@ header, #myBio {
     background-attachment: fixed;
 }
 .img1 {
-    background-image: url('/images/header-image.jpg');
+    background-image: url('./images/header-image.jpg');
 }
 header .intro {
     position: absolute;
@@ -61,7 +61,7 @@ nav .container {
 }
 .logo{
     position: absolute;
-    background-image: url('/images/icon-cat.png');
+    background-image: url('./images/icon-cat.png');
     background-repeat: no-repeat;
     background-size: contain;
     top: 50%;
