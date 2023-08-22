@@ -13,9 +13,9 @@ let toggleTrigger = false;
 //取得navlinks
 const navLinks = document.querySelector('.nav-links');
 const navLinksLi = navLinks.querySelectorAll('a');
+let currentActiveLi = document.querySelector('.active');
 //取得各個main中div的位置
 const sectionTitle = document.querySelectorAll('div[id^="my"]');
-console.log(sectionTitle);
 window.addEventListener('resize',()=>{
     if (window.innerWidth > 992) {
         toggleTrigger = false;
@@ -61,8 +61,9 @@ window.addEventListener('scroll',()=>{
             currentScrollY >= sec.offsetTop &&
             currentScrollY <= sec.offsetTop + sec.offsetHeight) {
             if (navLinksLi[index].classList.contains("active") == false) {
-                navLinksLi.forEach((x) => x.classList.remove("active"));
+                currentActiveLi.classList.remove("active");
                 navLinksLi[index].classList.add("active");
+                currentActiveLi = navLinksLi[index]; 
             }
         }
     })
@@ -79,29 +80,46 @@ window.addEventListener('click', (event) => {
     }
 
     //處理toggle button顯示條件
-    if (clickedTarget === toggleButton) navLinksDisplay();
-    toggleBar.forEach((bar) => {
-        if (clickedTarget === bar) navLinksDisplay();
-    });
+    // if (clickedTarget === toggleButton) navLinksDisplay();
+    // toggleBar.forEach((bar) => {
+    //     if (clickedTarget === bar) navLinksDisplay();
+    // });
 
 
-    if (clickedTarget.tagName === "A"){
-        //處理navlink點擊條件
-        for (let li of navLinksLi) {
-            if (clickedTarget == li) {
-                console.log(li);
-                //刪除所有navlink上的active class
-                navLinksLi.forEach((x) => x.classList.remove("active"));
-                //添加目前點擊的navlink
-                li.classList.add("active");
-                //如果視窗小於992時，才執行顯示navlink條件
-                if (window.innerWidth < 992) navLinksDisplay();
-                break;
-            }
-        }
-    }
+    // if (clickedTarget.tagName === "A"){
+    //     //處理navlink點擊條件
+    //     for (let li of navLinksLi) {
+    //         if (clickedTarget == li) {
+    //             //刪除所有navlink上的active class
+    //             navLinksLi.forEach((x) => x.classList.remove("active"));
+    //             //添加目前點擊的navlink
+    //             li.classList.add("active");
+    //             //如果視窗小於992時，才執行顯示navlink條件
+    //             if (window.innerWidth < 992) navLinksDisplay();
+    //             break;
+    //         }
+    //     }
+    // }
     
 })
+
+toggleButton.addEventListener('click', function() {
+    navLinksDisplay();
+});
+toggleButton.addEventListener("touchStart", function () {
+    navLinksDisplay();
+});
+
+navLinksLi.forEach(li=>{
+    li.addEventListener('click',function(){
+        currentActiveLi.classList.remove("active");
+        li.classList.add("active");
+        currentActiveLi = li;
+        //如果視窗小於992時，才執行顯示navlink條件
+        if (window.innerWidth < 992) navLinksDisplay();
+    })
+})
+
 function navLinksDisplay(){
     toggleTrigger = toggleTrigger ? false : true;
     if (toggleTrigger)
