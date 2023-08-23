@@ -10,6 +10,7 @@
     --workExp_bgGreen : #F4F8F2;
     --bgGrey: #F8F9FA;
     --breakpoint-lg: 992px;
+    --breakpoint-sm: 768px;
 }
 body {
     font-family: "Nunito", sans-serif;
@@ -20,12 +21,12 @@ body {
 .header-container {
     position: relative;
     width:100%;
-}
-
-header, #myBio {
-    width:100%;
     height:100vh;
 }
+/* header {
+    width:100%;
+    height:100vh;
+} */
 .bg {
     width:100%;
     height: 100vh;
@@ -33,10 +34,11 @@ header, #myBio {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-}
-.img1 {
     background-image: url('../../images/header-image.jpg');
 }
+/* .img1 {
+    background-image: url('../../images/header-image.jpg');
+} */
 header .intro {
     position: absolute;
     color: white;
@@ -69,6 +71,7 @@ nav .container {
     margin:0 50px;
     width:1.7em;
     height:1.7em;
+    /* padding:25px 0; */
 }
 nav .nav-links {
     display:flex;
@@ -81,8 +84,9 @@ nav .nav-links {
     list-style-type: none;
 }
 nav a {
+    display: block;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 25px 20px;
     color: white;
     opacity: 0.5;
     font-size:1em;
@@ -141,46 +145,22 @@ nav .toggle-button:hover {
     border-radius: 50%;
     box-shadow: 0 0 10px var(--lightGrey);
 }
-.show-list{
-    height:350px !important;
-}
-
-@media screen and (max-width: 992px) {
-    nav .nav-links {
-        display:block;
-        position: absolute;
-        top:100%;
-        width:100%;
-        height:0;
-        overflow-y:hidden;
-    }
-
-    nav .nav-links a{
-        display:block;
-        padding:10px 20px;
-        transition: background-color 0.1s ease;
-    }
-    nav .nav-links a:hover {
-        background-color: var(--lightGrey)
-    }
-    nav .toggle-button {
-        display:block;
-    }
-}
-@media screen and (max-width: 768px) {
-}
 
 
 
 .main-container {
-    padding:100px 50px;
+    padding: 100px 50px;
+    margin: 0 auto;
+    width: var(--breakpoint-lg);
 }
+
 
 #myBio{
     display: flex;
     flex-wrap: wrap;
     height:auto;
 }
+
 #myBio .myBio-img {
     width: 60%;
     padding:0 100px 0 20px;
@@ -198,22 +178,14 @@ nav .toggle-button:hover {
 #myBio .myBio-intro .skill {
     padding-bottom: 30px;
 }
-#myBio .myBio-intro .button ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding:0;
-    margin:0;
-    
-}
-
 #myBio .myBio-intro .button a {
     display:inline-block;
     color: white;
     text-decoration: none;
+    font-size: 1em;
     padding:15px 30px;
     border-radius: 30px;
-    margin-right: 10px;
+    margin-bottom: 10px;
     transition:background-color 0.3s ease;
 }
 #myBio .myBio-intro .hireMe {
@@ -229,33 +201,19 @@ nav .toggle-button:hover {
     background-color: var(--lightGrey);
 }
 
-@media screen and (max-width: 992px) {
-    #myBio .myBio-img, #myBio .myBio-intro {
-        width:100%;
-        padding: 0 40px;
-    }
-    #myBio .myBio-img img{
-        height:50vh;
-    }
-}
-@media screen and (max-width: 768px) {
-}
 
 #myProtfolio .protfolio-title {
     margin-bottom: 10px;
 }
 .container-title {
+    width: 100%;
+    text-align: center;
     margin-bottom: 100px;
 }
 
 #myProtfolio {
     display:block;
     text-align: center;
-    /* display:flex; */
-    /* flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 }
 #myProtfolio .link {
     width:100%;
@@ -301,28 +259,18 @@ nav .toggle-button:hover {
 #myProtfolio .col img:hover{
     transform: scale(1.2);
 }
-@media screen and (max-width: 992px) {
-    #myProtfolio .col {
-        flex-basis: 50%;
-    }
-}
-@media screen and (max-width: 768px) {
-    #myProtfolio .col {
-        flex-basis: 100%;
-    }
-}
-
 #myService {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 #myService .service-group {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding:0 50px 50px 50px;
+    /* padding:0 50px 50px 50px; */
 }
 #myService .col {
     display:block;
@@ -341,16 +289,6 @@ nav .toggle-button:hover {
 #myService .service-content > p{
     color: var(--lightGrey)
 }
-@media screen and (max-width: 992px) {
-    #myService .col {
-        flex-basis: 50%;
-    }
-}
-@media screen and (max-width: 768px) {
-    #myService .col {
-        flex-basis: 100%;
-    }
-}
 #myResume {
     display: flex;
     flex-direction: column;
@@ -360,10 +298,11 @@ nav .toggle-button:hover {
 #myResume .resume-group {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 #myResume .resume-img {
-    width:40%;
-    padding:0 20px;
+    width: 40%;
+    /* padding-right: 20px; */
 }
 #myResume .resume-img img{
     width: 100%;
@@ -372,7 +311,7 @@ nav .toggle-button:hover {
 }
 #myResume .resume-Exp {
     width:60%;
-    padding: 0 20px 0 60px;
+    padding-left: 80px;
 }
 #myResume .resume-Exp h2{
     margin-top:0;
@@ -406,34 +345,24 @@ nav .toggle-button:hover {
 #myResume .workExp .times p{
     margin:0 0 20px 0;
 }
-#myResume .workExp .detail p,
+#myResume .workExp .detail span,
 #myResume .workExp .times .calendar {
     margin:0;
     font-size: 0.5em;
     color: var(--lightGrey);
 }
+#myResume .workExp .detail div {
+    display: inline-block;
+}
+#myResume .workExp .detail span {
+    padding-right: 10px;
+}
 #myResume .workExp img {
     width: 10px;
     height: 10px;
 }
-#myResume .detail span {
-    padding-right: 10px;
-}
-#myResume .times {
+#myResume .workExp .times {
     text-align: right;
-}
-@media screen and (max-width: 992px) {
-    .resume-group{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .resume-img, .resume-Exp {
-        width:100% !important;
-        padding: 0 20px !important;
-    }
-}
-@media screen and (max-width: 768px) {
 }
 #myFriend {
     display: flex;
@@ -452,7 +381,8 @@ nav .toggle-button:hover {
     flex-basis:50%;
     display: flex;
     flex-direction: row;
-    padding:0 25px 100px 25px;
+    padding-bottom: 100px;
+    /* padding:0 25px 100px 25px; */
 }
 #myFriend .friend .person-icon{
     flex-basis:20%;
@@ -489,22 +419,15 @@ nav .toggle-button:hover {
     border-color:transparent white transparent transparent;
     border-style: solid;
 }
-@media screen and (max-width: 992px) {
-    #myFriend .friend{
-        flex-basis: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-}
 #myBlog {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:var(--bgGrey);
+    /* background-color:var(--bgGrey); */
 }
 #myBlog .blog-group{
-    width:70%;
+    width: 100%;
     /* padding:0; */
 }
 
@@ -514,6 +437,11 @@ nav .toggle-button:hover {
     justify-content: space-between;
     margin: 0 20px;
     padding-top: 20px;
+    cursor: pointer;
+}
+#myBlog .blog:hover h2{
+    transition: color 0.3s ease;
+    color: var(--lightGreen)
 }
 #myBlog .blog div:last-child{
     display: flex;
@@ -536,6 +464,7 @@ nav .toggle-button:hover {
 #myFooter {
     display: block;
     background-color: var(--bgGrey);
+    padding: 100px 50px;
 }
 #myFooter .row{
     display: flex;
@@ -577,7 +506,68 @@ nav .toggle-button:hover {
 #myFooter .connect img:hover {
     opacity: 0.5;
 }
+
 @media screen and (max-width: 992px) {
+    nav .nav-links {
+        display:block;
+        position: absolute;
+        top:100%;
+        width:100%;
+        height:0;
+        overflow-y:hidden;
+    }
+    
+    nav .nav-links a{
+        display:block;
+        padding:10px 20px;
+        transition: background-color 0.1s ease;
+    }
+    nav .nav-links a:hover {
+        background-color: var(--lightGrey)
+    }
+    nav .toggle-button {
+        display:block;
+    }
+    .main-container {
+        width: var(--breakpoint-sm);
+    }
+    /* #myBio */
+    #myBio .myBio-img, #myBio .myBio-intro {
+        width:100%;
+        padding: 0;
+        /* padding: 0 40px; */
+    }
+    #myBio .myBio-img img{
+        height:50vh;
+    }
+    /* #myProtfolio */
+    #myProtfolio .col {
+        flex-basis: 50%;
+    }
+    
+    /* #myService */
+    #myService .col {
+        flex-basis: 50%;
+    }
+    
+    /* #myResume */
+    #myResume .resume-group{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #myResume .resume-img, #myResume .resume-Exp {
+        width:100%;
+        padding: 0px;
+    }
+    #myResume .resume-img {
+        padding-bottom: 30px;
+    }
+    /* #myFriend */
+    #myFriend .friend{
+        flex-basis: 100%;
+    }
+    /* #myFooter  */
     #myFooter .about-connect{
         flex-basis: 100%;
     }
@@ -585,7 +575,26 @@ nav .toggle-button:hover {
         flex-direction: column;
     }
 }
+
 @media screen and (max-width: 768px) {
+    .main-container {
+        /* padding: 100px 15px; */
+        width: 100%;
+    }
+    /* #myProtfolio */
+    #myProtfolio .col {
+        flex-basis: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* #myService */
+    #myService .col {
+        flex-basis: 100%;
+    }
+    #myService .col {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 

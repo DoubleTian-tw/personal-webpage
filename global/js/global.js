@@ -13,95 +13,70 @@ let toggleTrigger = false;
 //取得navlinks
 const navLinks = document.querySelector('.nav-links');
 const navLinksLi = navLinks.querySelectorAll('a');
+let navLinksLi_height = parseInt(getComputedStyle(navLinksLi[0]).height); 
+const navLinksLi_count = navLinksLi.length;
+//目前active class所處位置
 let currentActiveLi = document.querySelector('.active');
 //取得各個main中div的位置
 const sectionTitle = document.querySelectorAll('div[id^="my"]');
+
+console.log(document.documentElement);
+//resize window
 window.addEventListener('resize',()=>{
     if (window.innerWidth > 992) {
         toggleTrigger = false;
-        navLinks.classList.remove("show-list");
         navLinks.classList.remove("show-list-transition");
+        navLinks.style.height = "100%";
     } 
     else {
         navLinks.classList.add("show-list-transition");
+        navLinks.style.height = "0px";
     }
     
 })
+
 window.addEventListener('scroll',()=>{
     //取得目前滾動Y軸的位置
     const currentScrollY = window.scrollY;
-    
+
     //處理navbar滾動的狀態
     if (currentScrollY > navbarHeight) {
         navbar.classList.add("scrolled");
-    }
-    else{
+    } else {
         navbar.classList.remove("scrolled");
         navbar.classList.remove("sleep");
-        
     }
-    
+
     if (currentScrollY > halfVwHeight) {
-        navbar.classList.add('awake');
+        navbar.classList.add("awake");
         sleepBool = true;
     }
     if (currentScrollY < halfVwHeight && currentScrollY > navbarHeight) {
         navbar.classList.remove("awake");
-        if (sleepBool){
+        if (sleepBool) {
             navbar.classList.add("sleep");
             sleepBool = false;
         }
-    }    
-    navLinks.style.backgroundColor = currentScrollY > halfVwHeight ? "white" : null;
-    
+    }
+    navLinks.style.backgroundColor =
+        currentScrollY > halfVwHeight ? "white" : null;
+
     //處理滾動時目前處在的main中div相對頂部的位置
-    sectionTitle.forEach(function(sec,index) {
-        // console.log(sec.offsetTop);
+    //active class所處位置設定
+    sectionTitle.forEach(function (sec, index) {
         if (
             currentScrollY >= sec.offsetTop &&
-            currentScrollY <= sec.offsetTop + sec.offsetHeight) {
+            currentScrollY <= sec.offsetTop + sec.offsetHeight
+        ) {
             if (navLinksLi[index].classList.contains("active") == false) {
                 currentActiveLi.classList.remove("active");
                 navLinksLi[index].classList.add("active");
-                currentActiveLi = navLinksLi[index]; 
+                currentActiveLi = navLinksLi[index];
             }
         }
-    })
+    });
 })
 
-window.addEventListener('click', (event) => {
-    const clickedTarget = event.target;
-    //smooth Jump Over
-    if (clickedTarget.tagName === "A" &&
-    clickedTarget.getAttribute("href").startsWith("#")
-    ) {
-        event.preventDefault(); //取消默認狀態
-        smoothJumpOver(clickedTarget.getAttribute("href"));
-    }
-
-    //處理toggle button顯示條件
-    // if (clickedTarget === toggleButton) navLinksDisplay();
-    // toggleBar.forEach((bar) => {
-    //     if (clickedTarget === bar) navLinksDisplay();
-    // });
-
-
-    // if (clickedTarget.tagName === "A"){
-    //     //處理navlink點擊條件
-    //     for (let li of navLinksLi) {
-    //         if (clickedTarget == li) {
-    //             //刪除所有navlink上的active class
-    //             navLinksLi.forEach((x) => x.classList.remove("active"));
-    //             //添加目前點擊的navlink
-    //             li.classList.add("active");
-    //             //如果視窗小於992時，才執行顯示navlink條件
-    //             if (window.innerWidth < 992) navLinksDisplay();
-    //             break;
-    //         }
-    //     }
-    // }
-    
-})
 
 toggleButton.addEventListener('click', function() {
     navLinksDisplay();
@@ -111,22 +86,29 @@ toggleButton.addEventListener("touchStart", function () {
 });
 
 navLinksLi.forEach(li=>{
-    li.addEventListener('click',function(){
+    li.addEventListener('click',function(event) {
+        //active class所處位置設定
         currentActiveLi.classList.remove("active");
         li.classList.add("active");
         currentActiveLi = li;
-        //如果視窗小於992時，才執行顯示navlink條件
+        //如果視窗小於992時，才執行顯示navlink
         if (window.innerWidth < 992) navLinksDisplay();
+        //點擊時取消默認狀態，並平順的移動到指定id上
+        if (li.getAttribute('href').startsWith('#')) {
+            event.preventDefault(); //取消默認狀態
+            smoothJumpOver(li.getAttribute("href"));
+        }
     })
 })
-
+//控制navlinks的顯示狀況
 function navLinksDisplay(){
     toggleTrigger = toggleTrigger ? false : true;
     if (toggleTrigger)
-        navLinks.classList.add("show-list");
+        navLinks.style.height = `${navLinksLi_height * navLinksLi_count}px`;
     else
-        navLinks.classList.remove("show-list");
+        navLinks.style.height = '0px';
 }
+//滑順的移動到目標title
 function smoothJumpOver(herfTarget) {
     const targetElement = document.querySelector(herfTarget);
     if (targetElement) {
@@ -135,16 +117,5 @@ function smoothJumpOver(herfTarget) {
             behavior: "smooth",
         });
     }    
-} 
-function activeNavbar(target) {
-    for (let li of navLinksLi) {
-        if (target == li) {
-            //刪除所有navlink上的active class
-            navLinksLi.forEach((x) => x.classList.remove("active"));
-            //添加目前點擊的navlink
-            li.classList.add("active");
-            break;
-        }
-    }
 }
 
