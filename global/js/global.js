@@ -2,6 +2,7 @@
 const navbar = document.querySelector('.navbar');
 //取得navbar的高度
 const navbarHeight = navbar.clientHeight;
+console.log(navbarHeight);
 //取得畫面的一半
 const halfVwHeight = window.innerHeight / 3;
 let sleepBool = false;
@@ -13,7 +14,6 @@ let toggleTrigger = false;
 //取得navlinks
 const navLinks = document.querySelector('.nav-links');
 const navLinksLi = navLinks.querySelectorAll('a');
-let navLinksLi_height = parseInt(getComputedStyle(navLinksLi[0]).height); 
 const navLinksLi_count = navLinksLi.length;
 //目前active class所處位置
 let currentActiveLi = document.querySelector('.active');
@@ -102,11 +102,10 @@ navLinksLi.forEach(li=>{
 })
 //控制navlinks的顯示狀況
 function navLinksDisplay(){
+    let navLinksLi_height = parseInt(getComputedStyle(navLinksLi[0]).height); 
     toggleTrigger = toggleTrigger ? false : true;
-    if (toggleTrigger)
-        navLinks.style.height = `${navLinksLi_height * navLinksLi_count}px`;
-    else
-        navLinks.style.height = '0px';
+    navLinks.style.height = (toggleTrigger == true) ?  
+        `${navLinksLi_height * navLinksLi_count}px` : '0px';
 }
 //滑順的移動到目標title
 function smoothJumpOver(herfTarget) {
