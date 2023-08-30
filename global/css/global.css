@@ -6,11 +6,12 @@
     --lightGrey : #939393;
     --drakGreen : #799664;
     --lightGreen : #96BB7C;
-    --workExp_colorGreen : #9DBF85;
-    --workExp_bgGreen : #F4F8F2;
+    --workExp-colorGreen : #9DBF85;
+    --workExp-bgGreen : #F4F8F2;
     --bgGrey: #F8F9FA;
     --breakpoint-lg: 992px;
     --breakpoint-sm: 768px;
+    --transition-all: all 0.3s ease;
 }
 body {
     font-family: "Nunito", sans-serif;
@@ -18,15 +19,14 @@ body {
     padding: 0;
     height: 100%;
 }
+ul {
+    list-style-type: none;
+}
 .header-container {
     position: relative;
     width:100%;
     height:100vh;
 }
-/* header {
-    width:100%;
-    height:100vh;
-} */
 .bg {
     width:100%;
     height: 100vh;
@@ -36,9 +36,6 @@ body {
     background-attachment: fixed;
     background-image: url('../../images/header-image.jpg');
 }
-/* .img1 {
-    background-image: url('../../images/header-image.jpg');
-} */
 header .intro {
     position: absolute;
     color: white;
@@ -56,10 +53,10 @@ nav {
     left: 0;
     z-index: 1;
     width:100%;
+    padding: 25px 0;
 }
-nav .container {
+.nav-container {
     position: relative;
-    height:100px;
 }
 .logo{
     position: absolute;
@@ -71,18 +68,14 @@ nav .container {
     margin:0 50px;
     width:1.7em;
     height:1.7em;
-    /* padding:25px 0; */
 }
-nav .nav-links {
+.links {
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     margin:0;
     padding:0;
     flex-wrap: nowrap;
-    list-style-type: none;
-    transition:all 0.3s ease;
 }
 
 
@@ -90,7 +83,7 @@ nav .nav-links {
 nav .nav-links a {
     display: block;
     text-decoration: none;
-    padding: 25px 20px;
+    margin: 0 20px;
     color: white;
     opacity: 0.5;
     font-size: 1em;
@@ -132,13 +125,13 @@ nav .toggle-button:hover {
     box-shadow: 0 0 10px var(--lightGrey);
 }
 .awake {
-    margin-top:0px;
-    transition:all 0.3s ease;
+    margin-top: 0px;
+    transition: var(--transition-all);
 }
-.sleep, .show-list-transition {
-    transition:all 0.3s ease;
+.sleep {
+    transition: var(--transition-all);
 }
-.awake .nav-links a{
+.awake .links a{
     color: black;
 }
 .awake .toggle-button .bar{
@@ -227,7 +220,7 @@ nav .toggle-button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
+    /* list-style-type: none; */
     padding:0;
 }
 #myProtfolio .link li{
@@ -341,8 +334,8 @@ nav .toggle-button:hover {
     margin-top: 0;
     font-size: 0.8em;
     letter-spacing: 0.2em;
-    color: var(--workExp_colorGreen);
-    background-color: var(--workExp_bgGreen);
+    color: var(--workExp-colorGreen);
+    background-color: var(--workExp-bgGreen);
     padding: 5px 15px;
     border-radius: 30px;
 }
@@ -495,7 +488,6 @@ nav .toggle-button:hover {
 #myFooter .connect ul {
     display: flex;
     flex-direction: row;
-    list-style-type: none;
     padding:0;
 }
 #myFooter .connect li {
@@ -511,23 +503,63 @@ nav .toggle-button:hover {
     opacity: 0.5;
 }
 
+.goBack-link img{
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 2em;
+    height: auto;
+    transform: rotate(90deg);
+    animation-name: goBack-breath;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes goBack-breath {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+        
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .links-container {
+        height: auto !important;
+    }
+}
 @media screen and (max-width: 992px) {
-    nav .nav-links {
-        display:block;
-        position: absolute;
-        top: 100%;
-        width: 100%;
+    .logo, .toggle-button {
+        position: static;
+        transform: translateY(0%);
+        top: 0;
+    }
+    .links-container {
         height: 0;
         overflow:hidden;
+        position: absolute;
+        top:140%;
+        width:100%;
+        transition: var(--transition-all);
     }
-    
-    nav .nav-links a{
+    .links {
+        display:block;
+    }
+    .links a{
         display:block;
         padding:10px 20px;
-        transition: background-color 0.1s ease;
+        margin: 0;
+        transition: var(--transition-all);
     }
-    nav .nav-links a:hover {
-        background-color: var(--lightGrey)
+    .links a:hover {
+        background-color: var(--lightGrey);
+        padding-left: 10px;
     }
     nav .toggle-button {
         display:block;

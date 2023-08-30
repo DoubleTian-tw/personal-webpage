@@ -12,28 +12,17 @@ const toggleBar = document.querySelectorAll('.bar');
 //判斷toggle button是否按下
 let toggleTrigger = false;
 //取得navlinks
-const navLinks = document.querySelector('.nav-links');
+const navLinksContainer = document.querySelector('.links-container');
+const navLinks = document.querySelector('.links');
+const scrollLinks = document.querySelectorAll('.scroll-link');
 const navLinksLi = navLinks.querySelectorAll('a');
 const navLinksLi_count = navLinksLi.length;
 //目前active class所處位置
 let currentActiveLi = document.querySelector('.active');
 //取得各個main中div的位置
 const sectionTitle = document.querySelectorAll('div[id^="my"]');
-
-console.log(document.documentElement);
-//resize window
-window.addEventListener('resize',()=>{
-    if (window.innerWidth > 992) {
-        toggleTrigger = false;
-        navLinks.classList.remove("show-list-transition");
-        navLinks.style.height = "100%";
-    } 
-    else {
-        navLinks.classList.add("show-list-transition");
-        navLinks.style.height = "0px";
-    }
-    
-})
+//取得goback link
+const gobackLink = document.querySelector('.goBack-link').childNodes[1];
 
 window.addEventListener('scroll',()=>{
     //取得目前滾動Y軸的位置
@@ -50,6 +39,8 @@ window.addEventListener('scroll',()=>{
     if (currentScrollY > halfVwHeight) {
         navbar.classList.add("awake");
         sleepBool = true;
+        gobackLink.style.display = "block";
+        
     }
     if (currentScrollY < halfVwHeight && currentScrollY > navbarHeight) {
         navbar.classList.remove("awake");
@@ -57,6 +48,7 @@ window.addEventListener('scroll',()=>{
             navbar.classList.add("sleep");
             sleepBool = false;
         }
+        gobackLink.style.display = "none";
     }
     navLinks.style.backgroundColor =
         currentScrollY > halfVwHeight ? "white" : null;
@@ -85,31 +77,40 @@ toggleButton.addEventListener("touchStart", function () {
     navLinksDisplay();
 });
 
-navLinksLi.forEach(li=>{
+scrollLinks.forEach((li) => {
     li.addEventListener('click',function(event) {
-        //active class所處位置設定
-        currentActiveLi.classList.remove("active");
-        li.classList.add("active");
-        currentActiveLi = li;
-        //如果視窗小於992時，才執行顯示navlink
-        if (window.innerWidth < 992) navLinksDisplay();
+        // active class所處位置設定
+        if (li.classList.contains("goBack-link") === false)
+        {
+            currentActiveLi.classList.remove("active");
+            li.classList.add("active");
+            currentActiveLi = li;
+            //如果視窗小於992時，才執行顯示navlink
+            if (window.innerWidth < 992) navLinksDisplay();
+        }
         //點擊時取消默認狀態，並平順的移動到指定id上
         if (li.getAttribute('href').startsWith('#')) {
+            console.log(li.getAttribute('href'));
             event.preventDefault(); //取消默認狀態
             smoothJumpOver(li.getAttribute("href"));
         }
     })
-})
+});
+
 //控制navlinks的顯示狀況
 function navLinksDisplay(){
-    let navLinksLi_height = parseInt(getComputedStyle(navLinksLi[0]).height); 
+    let navLinksHeight = navLinks.getBoundingClientRect().height;
+    console.log(navLinksHeight);
     toggleTrigger = toggleTrigger ? false : true;
-    navLinks.style.height = (toggleTrigger == true) ?  
-        `${navLinksLi_height * navLinksLi_count}px` : '0px';
+    if (toggleTrigger)
+        navLinksContainer.style.height = `${navLinksHeight}px`;
+    else
+        navLinksContainer.style.height = "0px";
 }
 //滑順的移動到目標title
 function smoothJumpOver(herfTarget) {
     const targetElement = document.querySelector(herfTarget);
+    console.log(herfTarget);
     if (targetElement) {
         window.scrollTo({
             top: targetElement.offsetTop,

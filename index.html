@@ -12,7 +12,7 @@
 <body>
     <div id="myHome" class="header-container">
         <header>
-            <div class="bg img1">
+            <div class="bg">
             </div>
             <div class="intro">
                 <h1>
@@ -23,17 +23,19 @@
             </div>
         </header>
         <nav class="navbar">
-            <div class="container">
+            <div class="nav-container">
                 <div class="logo"><a href=""></a></div>
-                <ul class="nav-links show-list-transition">
-                    <li><a href="#myHome" class="active">Home</a></li>
-                    <li><a href="#myBio">About</a></li>
-                    <li><a href="#myProtfolio">Portfolio</a></li>
-                    <li><a href="#myService">Service</a></li>
-                    <li><a href="#myResume">Resume</a></li>
-                    <li><a href="#myBlog">Blog</a></li>
-                    <li><a href="#myFooter">Contact</a></li>
-                </ul>
+                <div class="links-container">
+                    <ul class="links show-list-transition">
+                        <li><a class="active scroll-link" href="#myHome">Home</a></li>
+                        <li><a class="scroll-link" href="#myBio">About</a></li>
+                        <li><a class="scroll-link" href="#myProtfolio">Portfolio</a></li>
+                        <li><a class="scroll-link" href="#myService">Service</a></li>
+                        <li><a class="scroll-link" href="#myResume">Resume</a></li>
+                        <li><a class="scroll-link" href="#myBlog">Blog</a></li>
+                        <li><a class="scroll-link" href="#myFooter">Contact</a></li>
+                    </ul>
+                </div>
                 <div class="toggle-button">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -387,5 +389,9 @@
             </div>
         </div>
     </footer>
+
+    <a class="scroll-link goBack-link" href="#myHome">
+        <img src="./images/icon-goBack.png" alt="go back icon" title="Click me to go home page.">
+    </a>
 </body>
 </html>
