@@ -11,7 +11,7 @@ const protfolios = [
         id: 2,
         classification: "Web",
         name: "個人網站",
-        src: "./images/preview-image.jpg",
+        src: "./images/protfolio-preview-image.jpg",
         href: "https://doubletian-tw.github.io/personal-webpage",
         description: "lorem ipsum dolor sit amet, consectetur adip",
     },
