@@ -3,7 +3,7 @@ const protfolios = [
         id: 1,
         classification: "Game",
         name: "老七佳部落導覽",
-        src: "../../images/protfolio-senior-project.jpg",
+        src: "./images/protfolio-senior-project.jpg",
         href: "https://youtu.be/ZoPIULDfrJw?si=V6IxPAmD0-8LoI62",
         description: "lorem ipsum dolor sit amet, consectetur adip",
     },
@@ -11,7 +11,7 @@ const protfolios = [
         id: 2,
         classification: "Web",
         name: "個人網站",
-        src: "../../images/preview-image.jpg",
+        src: "./images/preview-image.jpg",
         href: "https://doubletian-tw.github.io/personal-webpage",
         description: "lorem ipsum dolor sit amet, consectetur adip",
     },
@@ -19,7 +19,7 @@ const protfolios = [
         id: 3,
         classification: "Slides",
         name: "ChatGPT的介紹簡報",
-        src: "../../images/protfolio-chatgpt-intro.jpg",
+        src: "./images/protfolio-chatgpt-intro.jpg",
         href: "https://1drv.ms/p/s!AqpWpkjGJfWehgXQxjPbZuyio4SG?e=l5Ti0N",
         description: "lorem ipsum dolor sit amet, consectetur adip",
     },
@@ -27,7 +27,7 @@ const protfolios = [
         id: 4,
         classification: "Tool",
         name: "方便辦公時的小工具",
-        src: "../../images/protfolio-work-helping-tool.jpg",
+        src: "./images/protfolio-work-helping-tool.jpg",
         href: "https://github.com/DoubleTian-tw/Fujitec_SpecTool",
         description:
             "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip",
@@ -105,18 +105,13 @@ function hoverPicture(){
             //設定每個 description 的正確高度
             let height = 0;
             //取得 picture的下個相鄰元素 desdescription
-            
-            for (let i = 0; i < description.children.length; i++) {
+            for (chidren of description.children){
                 // 取得每個元素包含本身、padding的高度
-                const offsetH = description.children[i].offsetHeight;
+                const offsetH = chidren.offsetHeight;
                 // 取得每個元素margin top & bottom的高度
                 const marginH =
-                    parseFloat(
-                        getComputedStyle(description.children[i]).
-                        marginTop) +
-                    parseFloat(
-                        getComputedStyle(description.children[i])
-                        .marginBottom);
+                    parseFloat(getComputedStyle(chidren).marginTop) +
+                    parseFloat(getComputedStyle(chidren).marginBottom);
                 height += (offsetH + marginH);
             }
             description.style.height = `${height}px`;
