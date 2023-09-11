@@ -6,6 +6,9 @@
     --lightGrey : #939393;
     --drakGreen : #799664;
     --lightGreen : #96BB7C;
+    --selectionBgColor: #DAF2FD;
+    --linkColor: #86d7f7;
+    --linkActiveColor: #9bddf7; 
     --workExp-colorGreen : #9DBF85;
     --workExp-bgGreen : #F4F8F2;
     --bgGrey: #F8F9FA;
@@ -14,11 +17,43 @@
     --transition-all: all 0.3s ease;
 }
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", "Noto Sans Traditional Chinese",sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
 }
+::selection {
+    background: var(--selectionBgColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.hyperLink {
+    position: relative;
+}
+.hyperLink:link {
+    color: var(--linkColor);
+}
+.hyperLink:visited, .hyperLink:hover {
+    color: var(--linkActiveColor);
+}
+.hyperLink:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color:  var(--linkActiveColor);
+    height: 2px;
+    width: 0;
+    transition: var(--transition-all);
+}
+.hyperLink:hover:after {
+    left: 0;
+    width:95%;
+}
+
 ul {
     list-style-type: none;
 }
@@ -304,7 +339,7 @@ nav .toggle-button:hover {
 
 .protfolio .description h4{
     position: relative;
-    margin: 1em 0.8em;
+    margin: 0.5em 0.8em;
 }
 .protfolio .description h4:after{
     content: "";
@@ -314,13 +349,19 @@ nav .toggle-button:hover {
     width: 0;
     height: 2px;
     background-color: black;
-    transition: var(--transition-all);
+    transition: all 0.8s ease;
 }
-.protfolio .description p {
+
+.protfolio .description div {
+    text-align: left;
+    padding: 0.3em 0.8em;
+    font-size: 0.8em;
+}
+/* .protfolio .description p {
     text-align: left;
     padding: 0 0.8em;
     font-size: 0.8em;
-}
+} */
 
 .classification {
     position: relative;
@@ -342,19 +383,22 @@ nav .toggle-button:hover {
 #myService .col {
     display:block;
     flex-basis: 33%;
-    padding:0 20px 100px 20px;
+    padding:0 1.1em 4.5em 1.1em;
 }
 #myService .content {
     border: 1px solid var(--lightGrey);
     border-radius: 5px;
     padding:30px;
+    text-transform: capitalize;
 } 
 #myService .content-header img{
     width: 80px;
     height: 80px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px var(--lightGrey);
 }
-#myService .service-content > p{
-    color: var(--lightGrey)
+.content > p{
+    text-align: left;
 }
 #myResume {
     display: flex;
@@ -369,7 +413,6 @@ nav .toggle-button:hover {
 }
 #myResume .resume-img {
     width: 40%;
-    /* padding-right: 20px; */
 }
 #myResume .resume-img img{
     width: 100%;
@@ -431,6 +474,8 @@ nav .toggle-button:hover {
 #myResume .workExp .times {
     text-align: right;
 }
+
+
 #myFriend {
     display: flex;
     flex-direction: column;
@@ -491,42 +536,36 @@ nav .toggle-button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color:var(--bgGrey); */
 }
-#myBlog .blog-group{
+.blog-group{
     width: 100%;
-    /* padding:0; */
 }
 
-#myBlog .blog {
+.blog {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0 20px;
     padding-top: 20px;
     cursor: pointer;
+    align-items: center;
 }
-#myBlog .blog:hover h2{
+.blog:hover h2{
     transition: color 0.3s ease;
     color: var(--lightGreen)
 }
-#myBlog .blog div:last-child{
-    display: flex;
-    align-items: center;
-    color: var(--lightGrey);
-    letter-spacing: 0.2em;
-}
-#myBlog .blog .times {
+.blog .times, .blog .read {
     color: var(--lightGrey);
     letter-spacing: 0.2em;
     font-size:0.8em;    
+    text-transform: uppercase;
 }
-#myBlog .blog h2{
+.blog h2{
     font-weight: normal;
     padding: 0 0 20px 0;
     margin:0;
 }
-
 
 #myFooter {
     display: block;
@@ -694,18 +733,17 @@ nav .toggle-button:hover {
     .protfolio {
         grid-template-columns: 1fr;
     }
-    /* #myProtfolio .col {
-        flex-basis: 100%;
-        padding-left: 0;
-        padding-right: 0;
-    } */
     /* #myService */
     #myService .col {
         flex-basis: 100%;
-    }
-    #myService .col {
         padding-left: 0;
         padding-right: 0;
+    }
+    /* #myBlog */
+    .blog {
+        /* flex-direction: column; */
+        display: block;
+        margin: 0;
     }
 }
 
