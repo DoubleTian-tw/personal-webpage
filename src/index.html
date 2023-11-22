@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Paddy Tian webpage">
     <meta property="og:description" content="This is personal webpage create by paddy tian. ">
-    <meta property="og:image" content="./src/images/preview-image.jpg">
-    <link rel="stylesheet" href="./src/css/global.css">
+    <meta property="og:image" content="./images/preview-image.jpg">
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Noto+Sans+Traditional+Chinese">
-    <link rel="icon" href="./src/images/icon-cat.png">
+    <link rel="icon" href="./images/icon-cat.png">
     <title>Welcome to PaddyTian World</title>
     <base target="_blank">
-    <script type="module" src="./src/js/equipmentDetection.js" defer></script>
-    <script src="./src/js/global.js" defer></script>
-    <script type="module" src="./src/js/protfolio.js" defer></script>
+    <script type="module" src="./js/equipmentDetection.js" defer></script>
+    <script src="./js/global.js" defer></script>
+    <script type="module" src="./js/protfolio.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <div id="myHome" class="header-container">
         <header>
             <div class="bg">
@@ -30,7 +31,10 @@
         </header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo"><a href=""></a></div>
+                <div class="logo">
+                    <a href="#myHome">
+                    </a>
+                </div>
                 <div class="links-container">
                     <ul class="links show-list-transition">
                         <li><a class="active scroll-link" href="#myHome">Home</a></li>
@@ -51,9 +55,10 @@
         </nav>
     </div>
     <main>
+        <!-- About me -->
         <div id="myBio" class="main-container">
             <div class="myBio-img">
-                <img src="./src/images/myBio-image.jpg" alt="This's me" oncontextmenu="return false;">
+                <img src="./images/myBio-image.jpg" alt="This's me" oncontextmenu="return false;">
             </div>
             <div class="myBio-intro">
                 <div class="text">
@@ -103,22 +108,23 @@
                     <p>Vue</p>
                 </div>
                 <div class="button">
-                    <a class="hireMe" href="#hireMe">HIRE ME</a>
-                    <a class="cv" href="#CV">DOWNLOAD CV</a>
+                    <a class="hireMe" href="javascript:void(0)">HIRE ME</a>
+                    <a class="cv" href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian">View My CV</a>
                 </div>
             </div>
         </div>
+        <!-- My Portfolio -->
         <div id="myProtfolio" class="main-container">
             <div class="protfolio-title">
-                <h1>My Protfolio</h1>
+                <h1>My Portfolio</h1>
             </div>
             <div class="classification">
             </div>
             <div class="protfolio">
             </div>
         </div>
-
-        <div id="myService" class="main-container">
+        <!-- My Habit -->
+        <div id="myHabit" class="main-container">
             <div class="container-title">
                 <h1>Habit</h1>
             </div>
@@ -126,7 +132,7 @@
                 <div class="col">
                     <div class="content">
                         <div class="content-header">
-                            <img src="./src/images/habit-dancing.png" alt="">
+                            <img src="./images/habit-dancing.png" alt="">
                             <p>dancing</p>
                         </div>
                         <p>從高中至今已經跳舞10幾年，喜歡Hip hop dance也嘗試過許多舞風，
@@ -139,7 +145,7 @@
                 <div class="col">
                     <div class="content">
                         <div class="content-header">
-                            <img src="./src/images/habit-aoe.png" alt="">
+                            <img src="./images/habit-aoe.png" alt="">
                             <p>age of empire II</p>
                         </div>
                         <p>又稱世紀帝國2，是一款經典的戰略遊戲，如果你聽過或玩過代表至少30歲囉...
@@ -153,7 +159,7 @@
                 <div class="col">
                     <div class="content">
                         <div class="content-header">
-                            <img src="./src/images/habit-riding.png" alt="">
+                            <img src="./images/habit-riding.png" alt="">
                             <p>Riding motorcycle</p>
                         </div>
                         <p>喜歡機車的我，目前有一台Fazer 250和MMBCU，喜歡跑山或長途旅行</p>
@@ -161,14 +167,14 @@
                 </div>
             </div>
         </div>
-        
+        <!-- My Resume -->
         <div id="myResume" class="main-container">
             <div class="container-title">
                 <h1>Resume</h1>
             </div>
             <div class="resume-group">
                 <div class="resume-img">
-                    <img src="./src/images/myResume-image.jpg" alt="" oncontextmenu="return false;">
+                    <img src="./images/myResume-image.jpg" alt="" oncontextmenu="return false;">
                 </div>
                 <div class="resume-Exp">
                     <div class="Exp-block">
@@ -179,14 +185,14 @@
                                     <div>
                                         <a class="hyperLink" href="https://www.tsecpv.com/zh-tw/">
                                             <span>
-                                                <img src="./src/images/icon-business.png" alt="">
+                                                <img src="./images/icon-business.png" alt="">
                                             </span>
                                             <span>TSEC, Inc</span>
                                         </a>
                                     </div>
                                     <div>
                                         <span>
-                                            <img src="./src/images/icon-location.png" alt="">
+                                            <img src="./images/icon-location.png" alt="">
                                         </span>
                                         <span>Hsinchu Hukou</span>
                                     </div>
@@ -194,7 +200,7 @@
                             <div class="times">
                                 <p><span class="fulltime">FULLTIME</span></p>
                                 <p class="calendar">
-                                    <img src="./src/images/icon-calendar.png" alt="">
+                                    <img src="./images/icon-calendar.png" alt="">
                                     <span>May 2022 - June 2023</span>
                                 </p>
                             </div>
@@ -207,7 +213,7 @@
                                     <div>
                                         <a class="hyperLink" href="https://www.fujitec.com.tw/">
                                             <span>
-                                                <img src="./src/images/icon-business.png" alt="">
+                                                <img src="./images/icon-business.png" alt="">
                                             </span>
                                             <span>
                                                 FUJITEC, Inc
@@ -216,7 +222,7 @@
                                     </div>
                                     <div>     
                                         <span>
-                                            <img src="./src/images/icon-location.png" alt="">
+                                            <img src="./images/icon-location.png" alt="">
                                         </span>   
                                         <span>
                                             Hsinchu Hukou
@@ -227,7 +233,7 @@
                             <div class="times">
                                 <p><span class="fulltime">FULLTIME</span></p>
                                 <p class="calendar">
-                                    <img src="./src/images/icon-calendar.png" alt="">
+                                    <img src="./images/icon-calendar.png" alt="">
                                     <span>August 2018 - April 2022</span>
                                 </p>
                             </div>
@@ -244,7 +250,7 @@
                                     <div>
                                         <a class="hyperLink" href="https://csd.kh.usc.edu.tw/">
                                             <span>
-                                                <img src="./src/images/icon-business.png" alt="">
+                                                <img src="./images/icon-business.png" alt="">
                                             </span>
                                             <span>
                                                 Shih Chien, University
@@ -253,7 +259,7 @@
                                     </div>
                                     <div>
                                         <span>
-                                            <img src="./src/images/icon-location.png" alt="">
+                                            <img src="./images/icon-location.png" alt="">
                                         </span>
                                         <span>
                                             Kaohsiung Chisan
@@ -263,7 +269,7 @@
                             </div>
                             <div class="times">
                                 <p class="calendar">
-                                    <img src="./src/images/icon-calendar.png" alt="">
+                                    <img src="./images/icon-calendar.png" alt="">
                                     <span>September 2014 - June 2018</span>
                                 </p>
                             </div>
@@ -273,6 +279,7 @@
                 </div>
             </div>
         </div>
+        <!-- My Blog -->
         <div id="myBlog" class="main-container">
             <div class="container-title">
                 <h1>Read my blog</h1>
@@ -317,7 +324,7 @@
             <div class="friend-group">
                 <div class="friend">
                     <div class="person-icon">
-                        <img src="./src/images/icon-boy01.png" alt="">
+                        <img src="./images/icon-boy01.png" alt="">
                     </div>
                     <div class="person-msg">
                         <div></div>
@@ -327,7 +334,7 @@
                 </div>
                 <div class="friend">
                     <div class="person-icon">
-                        <img src="./src/images/icon-girl01.png" alt="">
+                        <img src="./images/icon-girl01.png" alt="">
                     </div>
                     <div class="person-msg">
                         <div></div>
@@ -337,7 +344,7 @@
                 </div>
                 <div class="friend">
                     <div class="person-icon">
-                        <img src="./src/images/icon-girl02.png" alt="">
+                        <img src="./images/icon-girl02.png" alt="">
                     </div>
                     <div class="person-msg">
                         <div></div>
@@ -347,7 +354,7 @@
                 </div>
                 <div class="friend">
                     <div class="person-icon">
-                        <img src="./src/images/icon-boy02.png" alt="">
+                        <img src="./images/icon-boy02.png" alt="">
                     </div>
                     <div class="person-msg">
                         <div></div>
@@ -360,37 +367,40 @@
         
         
     </main>
+    <!-- Footer -->
     <footer>
         <div id="myFooter">
             <div class="row">
                 <div class="about-connect">
-                    <!-- <div class="about">
-                        <h4>About Tian</h4>
-                        <p></p>
-                    </div> -->
                     <div class="connect">
                         <h4>Connect</h4>
                         <ul>
-                            <!-- <li><a target="_blank" href="javascript:void(0)">
-                                <img src="./src/images/icon-socialMedia-facebook.png" alt="">
-                            </a></li> -->
                             <li><a target="_blank" href="https://github.com/DoubleTian-tw">
-                                <img src="./src/images/icon-socialMedia-github.png" alt="">
+                                <img src="./images/icon-socialMedia-github.png" alt="">
                             </a></li>
                             <li><a target="_blank" href="https://www.instagram.com/paddytian.tw/">
-                                <img src="./src/images/icon-socialMedia-instagram.png" alt="">
+                                <img src="./images/icon-socialMedia-instagram.png" alt="">
                             </a></li>
-                            <!-- <li><a target="_blank" href="javascript:void(0)">
-                                <img src="./src/images/icon-socialMedia-twitter.png" alt="">
-                            </a></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="contact">
                     <h4>Contact</h4>
-                    <p>Zhubei City, Hsinchu County</p>
-                    <p>0983089616</p>
-                    <p>q135135x@gmail.com</p>
+                    <ul>
+                        <li>
+                            <img src="./images/icon-livelocation.png" alt="live location icon">
+                            <span>Zhubei City, Hsinchu County</span>
+                        </li>
+                        <li>
+                            <img src="./images/icon-telephone.png" alt="live location icon">
+                            <span>0983089616</span>
+                        </li>
+                        <li>
+                            <img src="./images/icon-mail.png" alt="live location icon">
+                            <span>q135135x@gmail.com</span>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
             <div class="row center">
@@ -405,7 +415,7 @@
     </footer>
 
     <a class="scroll-link goBack-link" href="#myHome">
-        <img src="./src/images/icon-goBack.png" alt="go back icon" title="Click me to go home page.">
+        <img src="./images/icon-goBack.png" alt="go back icon" title="Click me to go home page.">
     </a>
 
 
