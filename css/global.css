@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 :root {
+    --darkBlack: rgb(43, 43, 43);
     --darkGrey: #6c757d;
     --lightGrey: #939393;
     --drakGreen: #799664;
@@ -362,30 +363,30 @@ nav .toggle-button:hover {
     position: relative;
 }
 
-#myService {
+#myHabit {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-#myService .service-group {
+#myHabit .service-group {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
-#myService .col {
+#myHabit .col {
     display: block;
     flex-basis: 33%;
     padding: 0 1.1em 4.5em 1.1em;
 }
-#myService .content {
+#myHabit .content {
     border: 1px solid var(--lightGrey);
     border-radius: 5px;
     padding: 30px;
     text-transform: capitalize;
 }
-#myService .content-header img {
+#myHabit .content-header img {
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -556,6 +557,7 @@ nav .toggle-button:hover {
 }
 .blog h2 {
     font-weight: normal;
+    color: var(--darkBlack);
     padding: 0 0 20px 0;
     margin: 0;
 }
@@ -568,36 +570,53 @@ nav .toggle-button:hover {
 #myFooter .row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
 }
 #myFooter .center {
     justify-content: center;
 }
 #myFooter .about-connect {
-    flex-basis: 70%;
-    padding-right: 50px;
+    /* flex-basis: 70%;
+    padding-right: 50px; */
 }
 #myFooter .contact {
-    flex-basis: 30%;
+    /* flex-basis: 30%; */
 }
 #myFooter h4 {
     font-weight: normal;
     font-size: 1em;
 }
-#myFooter p {
+#myFooter p,
+#myFooter span {
     font-size: 0.8em;
     color: var(--lightGrey);
+}
+#myFooter .contact ul {
+    padding: 0;
+    margin: 0;
+}
+#myFooter .contact li {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+#myFooter .contact li span {
+    margin-left: 0.5rem;
 }
 #myFooter .connect ul {
     display: flex;
     flex-direction: row;
     padding: 0;
 }
+
 #myFooter .connect li {
     margin: 0 5px;
 }
-#myFooter .connect img {
-    width: 1.5em;
-    height: 1.5em;
+#myFooter .connect img,
+#myFooter .contact img {
+    width: 1.2em;
+    height: 1.2em;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -687,8 +706,8 @@ nav .toggle-button:hover {
         flex-basis: 50%;
     } */
 
-    /* #myService */
-    #myService .col {
+    /* #myHabit */
+    #myHabit .col {
         flex-basis: 50%;
     }
 
@@ -716,6 +735,7 @@ nav .toggle-button:hover {
     }
     #myFooter .row {
         flex-direction: column;
+        gap: 0;
     }
 }
 
@@ -728,8 +748,8 @@ nav .toggle-button:hover {
     .protfolio {
         grid-template-columns: 1fr;
     }
-    /* #myService */
-    #myService .col {
+    /* #myHabit */
+    #myHabit .col {
         flex-basis: 100%;
         padding-left: 0;
         padding-right: 0;

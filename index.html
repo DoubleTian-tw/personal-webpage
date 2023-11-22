@@ -16,6 +16,7 @@
     <script type="module" src="./js/protfolio.js" defer></script>
 </head>
 <body>
+    <!-- Header -->
     <div id="myHome" class="header-container">
         <header>
             <div class="bg">
@@ -30,7 +31,10 @@
         </header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo"><a href=""></a></div>
+                <div class="logo">
+                    <a href="#myHome">
+                    </a>
+                </div>
                 <div class="links-container">
                     <ul class="links show-list-transition">
                         <li><a class="active scroll-link" href="#myHome">Home</a></li>
@@ -51,6 +55,7 @@
         </nav>
     </div>
     <main>
+        <!-- About me -->
         <div id="myBio" class="main-container">
             <div class="myBio-img">
                 <img src="./images/myBio-image.jpg" alt="This's me" oncontextmenu="return false;">
@@ -103,22 +108,23 @@
                     <p>Vue</p>
                 </div>
                 <div class="button">
-                    <a class="hireMe" href="#hireMe">HIRE ME</a>
-                    <a class="cv" href="#CV">DOWNLOAD CV</a>
+                    <a class="hireMe" href="javascript:void(0)">HIRE ME</a>
+                    <a class="cv" href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian">View My CV</a>
                 </div>
             </div>
         </div>
+        <!-- My Portfolio -->
         <div id="myProtfolio" class="main-container">
             <div class="protfolio-title">
-                <h1>My Protfolio</h1>
+                <h1>My Portfolio</h1>
             </div>
             <div class="classification">
             </div>
             <div class="protfolio">
             </div>
         </div>
-
-        <div id="myService" class="main-container">
+        <!-- My Habit -->
+        <div id="myHabit" class="main-container">
             <div class="container-title">
                 <h1>Habit</h1>
             </div>
@@ -161,7 +167,7 @@
                 </div>
             </div>
         </div>
-        
+        <!-- My Resume -->
         <div id="myResume" class="main-container">
             <div class="container-title">
                 <h1>Resume</h1>
@@ -273,6 +279,7 @@
                 </div>
             </div>
         </div>
+        <!-- My Blog -->
         <div id="myBlog" class="main-container">
             <div class="container-title">
                 <h1>Read my blog</h1>
@@ -360,37 +367,40 @@
         
         
     </main>
+    <!-- Footer -->
     <footer>
         <div id="myFooter">
             <div class="row">
                 <div class="about-connect">
-                    <!-- <div class="about">
-                        <h4>About Tian</h4>
-                        <p></p>
-                    </div> -->
                     <div class="connect">
                         <h4>Connect</h4>
                         <ul>
-                            <!-- <li><a target="_blank" href="javascript:void(0)">
-                                <img src="./images/icon-socialMedia-facebook.png" alt="">
-                            </a></li> -->
                             <li><a target="_blank" href="https://github.com/DoubleTian-tw">
                                 <img src="./images/icon-socialMedia-github.png" alt="">
                             </a></li>
                             <li><a target="_blank" href="https://www.instagram.com/paddytian.tw/">
                                 <img src="./images/icon-socialMedia-instagram.png" alt="">
                             </a></li>
-                            <!-- <li><a target="_blank" href="javascript:void(0)">
-                                <img src="./images/icon-socialMedia-twitter.png" alt="">
-                            </a></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="contact">
                     <h4>Contact</h4>
-                    <p>Zhubei City, Hsinchu County</p>
-                    <p>0983089616</p>
-                    <p>q135135x@gmail.com</p>
+                    <ul>
+                        <li>
+                            <img src="./images/icon-livelocation.png" alt="live location icon">
+                            <span>Zhubei City, Hsinchu County</span>
+                        </li>
+                        <li>
+                            <img src="./images/icon-telephone.png" alt="live location icon">
+                            <span>0983089616</span>
+                        </li>
+                        <li>
+                            <img src="./images/icon-mail.png" alt="live location icon">
+                            <span>q135135x@gmail.com</span>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
             <div class="row center">
