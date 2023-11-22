@@ -3,21 +3,21 @@
 }
 :root {
     --darkGrey: #6c757d;
-    --lightGrey : #939393;
-    --drakGreen : #799664;
-    --lightGreen : #96BB7C;
-    --selectionBgColor: #DAF2FD;
+    --lightGrey: #939393;
+    --drakGreen: #799664;
+    --lightGreen: #96bb7c;
+    --selectionBgColor: #daf2fd;
     --linkColor: #86d7f7;
-    --linkActiveColor: #9bddf7; 
-    --workExp-colorGreen : #9DBF85;
-    --workExp-bgGreen : #F4F8F2;
-    --bgGrey: #F8F9FA;
+    --linkActiveColor: #9bddf7;
+    --workExp-colorGreen: #9dbf85;
+    --workExp-bgGreen: #f4f8f2;
+    --bgGrey: #f8f9fa;
     --breakpoint-lg: 992px;
     --breakpoint-sm: 768px;
     --transition-all: all 0.3s ease;
 }
 body {
-    font-family: "Nunito", "Noto Sans Traditional Chinese",sans-serif;
+    font-family: "Nunito", "Noto Sans Traditional Chinese", sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -36,7 +36,8 @@ a {
 .hyperLink:link {
     color: var(--linkColor);
 }
-.hyperLink:visited, .hyperLink:hover {
+.hyperLink:visited,
+.hyperLink:hover {
     color: var(--linkActiveColor);
 }
 .hyperLink:after {
@@ -44,14 +45,14 @@ a {
     position: absolute;
     bottom: 0;
     left: 50%;
-    background-color:  var(--linkActiveColor);
+    background-color: var(--linkActiveColor);
     height: 2px;
     width: 0;
     transition: var(--transition-all);
 }
 .hyperLink:hover:after {
     left: 0;
-    width:95%;
+    width: 95%;
 }
 
 ul {
@@ -59,27 +60,26 @@ ul {
 }
 .header-container {
     position: relative;
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
 }
 .bg {
-    width:100%;
+    width: 100%;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url('../../images/header-image.jpg');
+    background-image: url("../images/header-image.jpg");
 }
 header .intro {
     position: absolute;
     color: white;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
-
 
 nav {
     position: absolute;
@@ -87,33 +87,31 @@ nav {
     top: 0;
     left: 0;
     z-index: 1;
-    width:100%;
+    width: 100%;
     padding: 25px 0;
 }
 .nav-container {
     position: relative;
 }
-.logo{
+.logo {
     position: absolute;
-    background-image: url('../../images/icon-cat.png');
+    background-image: url("../images/icon-cat.png");
     background-repeat: no-repeat;
     background-size: contain;
     top: 50%;
     transform: translateY(-50%);
-    margin:0 50px;
-    width:1.7em;
-    height:1.7em;
+    margin: 0 50px;
+    width: 1.7em;
+    height: 1.7em;
 }
 .links {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     flex-wrap: nowrap;
 }
-
-
 
 nav a {
     display: block;
@@ -123,7 +121,8 @@ nav a {
     opacity: 0.5;
     font-size: 1em;
 }
-nav a, .toggle-button {
+nav a,
+.toggle-button {
     transition-property: opacity;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
@@ -131,22 +130,22 @@ nav a, .toggle-button {
 .active {
     opacity: 1;
 }
-nav li:hover a{
+nav li:hover a {
     opacity: 1;
 }
 nav .toggle-button {
     position: absolute;
-    top:50%;
-    right:0;
+    top: 50%;
+    right: 0;
     transform: translateY(-50%);
     cursor: pointer;
-    display:none;
-    margin:0 50px;
+    display: none;
+    margin: 0 50px;
     opacity: 0.5;
 }
 nav .bar {
-    width:25px;
-    height:2px;
+    width: 25px;
+    height: 2px;
     background-color: white;
     margin: 5px 0;
 }
@@ -156,7 +155,7 @@ nav .toggle-button:hover {
 .scrolled {
     position: fixed;
     background-color: white;
-    margin-top:-110px;
+    margin-top: -110px;
     box-shadow: 0 0 10px var(--lightGrey);
 }
 .awake {
@@ -166,10 +165,10 @@ nav .toggle-button:hover {
 .sleep {
     transition: var(--transition-all);
 }
-.awake .links a{
+.awake .links a {
     color: black;
 }
-.awake .toggle-button .bar{
+.awake .toggle-button .bar {
     background-color: black;
 }
 .awake .logo {
@@ -178,26 +177,23 @@ nav .toggle-button:hover {
     box-shadow: 0 0 10px var(--lightGrey);
 }
 
-
-
 .main-container {
     padding: 100px 50px;
     margin: 0 auto;
     width: var(--breakpoint-lg);
 }
 
-
-#myBio{
+#myBio {
     display: flex;
     flex-wrap: wrap;
-    height:auto;
+    height: auto;
 }
 
 #myBio .myBio-img {
     width: 60%;
-    padding:0 100px 0 20px;
+    padding: 0 100px 0 20px;
 }
-#myBio .myBio-img img{
+#myBio .myBio-img img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
@@ -211,14 +207,14 @@ nav .toggle-button:hover {
     padding-bottom: 30px;
 }
 #myBio .myBio-intro .button a {
-    display:inline-block;
+    display: inline-block;
     color: white;
     text-decoration: none;
     font-size: 1em;
-    padding:15px 30px;
+    padding: 15px 30px;
     border-radius: 30px;
     margin-bottom: 10px;
-    transition:background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 #myBio .myBio-intro .hireMe {
     background-color: var(--lightGreen);
@@ -233,7 +229,6 @@ nav .toggle-button:hover {
     background-color: var(--lightGrey);
 }
 
-
 #myProtfolio .protfolio-title {
     margin-bottom: 10px;
 }
@@ -244,26 +239,26 @@ nav .toggle-button:hover {
 }
 
 #myProtfolio {
-    display:block;
+    display: block;
     text-align: center;
 }
 .classification {
-    width:100%;
+    width: 100%;
 }
-.classification ul{
+.classification ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding:0;
+    padding: 0;
 }
-.classification li{
-    padding:10px 20px;
+.classification li {
+    padding: 10px 20px;
     color: var(--lightGrey);
     cursor: pointer;
     transition: color 0.3s ease;
 }
-.classification li:hover{
+.classification li:hover {
     color: var(--lightGreen);
 }
 /* .protfolio {
@@ -296,30 +291,30 @@ nav .toggle-button:hover {
     gap: 1em 1em;
 }
 
-.protfolio .item{
+.protfolio .item {
     position: relative;
 }
-.protfolio .picture{
+.protfolio .picture {
     overflow: hidden;
-    width:100%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--lightGrey);
 }
-.protfolio img{
+.protfolio img {
     display: block;
-    width:100%;
+    width: 100%;
     object-fit: cover;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
-.protfolio img:hover{
+.protfolio img:hover {
     transform: scale(1.2);
 }
-.protfolio .item:hover .description{
+.protfolio .item:hover .description {
     height: 163px;
-    z-index:998;
+    z-index: 998;
 }
-.protfolio .item:hover h4:after{
+.protfolio .item:hover h4:after {
     width: 100%;
     left: 0;
 }
@@ -337,11 +332,11 @@ nav .toggle-button:hover {
     transition: var(--transition-all);
 }
 
-.protfolio .description h4{
+.protfolio .description h4 {
     position: relative;
     margin: 0.5em 0.8em;
 }
-.protfolio .description h4:after{
+.protfolio .description h4:after {
     content: "";
     position: absolute;
     bottom: -10%;
@@ -367,7 +362,6 @@ nav .toggle-button:hover {
     position: relative;
 }
 
-
 #myService {
     display: flex;
     flex-direction: column;
@@ -381,23 +375,23 @@ nav .toggle-button:hover {
     flex-direction: row;
 }
 #myService .col {
-    display:block;
+    display: block;
     flex-basis: 33%;
-    padding:0 1.1em 4.5em 1.1em;
+    padding: 0 1.1em 4.5em 1.1em;
 }
 #myService .content {
     border: 1px solid var(--lightGrey);
     border-radius: 5px;
-    padding:30px;
+    padding: 30px;
     text-transform: capitalize;
-} 
-#myService .content-header img{
+}
+#myService .content-header img {
     width: 80px;
     height: 80px;
     border-radius: 100%;
     box-shadow: 0 0 10px var(--lightGrey);
 }
-.content > p{
+.content > p {
     text-align: left;
 }
 #myResume {
@@ -414,28 +408,28 @@ nav .toggle-button:hover {
 #myResume .resume-img {
     width: 40%;
 }
-#myResume .resume-img img{
+#myResume .resume-img img {
     width: 100%;
     height: 65vh;
     object-fit: cover;
 }
 #myResume .resume-Exp {
-    width:60%;
+    width: 60%;
     padding-left: 80px;
 }
-#myResume .resume-Exp h2{
-    margin-top:0;
-    margin-bottom:20px;
+#myResume .resume-Exp h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
     font-weight: normal;
 }
-#myResume .Exp-block{
+#myResume .Exp-block {
     margin-bottom: 50px;
 }
 
 #myResume .workExp {
     display: flex;
     justify-content: space-between;
-    padding:20px 0 20px 0;
+    padding: 20px 0 20px 0;
 }
 #myResume .workExp .detail h4 {
     margin-bottom: 20px;
@@ -452,12 +446,12 @@ nav .toggle-button:hover {
     padding: 5px 15px;
     border-radius: 30px;
 }
-#myResume .workExp .times p{
-    margin:0 0 20px 0;
+#myResume .workExp .times p {
+    margin: 0 0 20px 0;
 }
 #myResume .workExp .detail span,
 #myResume .workExp .times .calendar {
-    margin:0;
+    margin: 0;
     font-size: 0.5em;
     color: var(--lightGrey);
 }
@@ -475,51 +469,49 @@ nav .toggle-button:hover {
     text-align: right;
 }
 
-
 #myFriend {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 #myFriend .friend-group {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:0 0 50px 0;
+    padding: 0 0 50px 0;
 }
 #myFriend .friend {
-    flex-basis:50%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: row;
     padding-bottom: 100px;
     /* padding:0 25px 100px 25px; */
 }
-#myFriend .friend .person-icon{
-    flex-basis:20%;
-    display:block;
+#myFriend .friend .person-icon {
+    flex-basis: 20%;
+    display: block;
 }
-#myFriend .friend .person-msg{
+#myFriend .friend .person-msg {
     position: relative;
-    flex-basis:80%;
-    padding:20px 30px;
-    margin:0 30px;
+    flex-basis: 80%;
+    padding: 20px 30px;
+    margin: 0 30px;
     background-color: white;
-    border-radius: 10px;;
-    box-shadow: 0 0 20px var(--lightGrey) ;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--lightGrey);
 }
-#myFriend .friend .person-msg h4{
+#myFriend .friend .person-msg h4 {
     font-style: italic;
     font-weight: normal;
 }
-#myFriend .friend img{
-    width:100px;
-    height:100px;
+#myFriend .friend img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border:5px solid white;
+    border: 5px solid white;
     background-color: rgb(201, 201, 201);
-    box-shadow: 0 0 15px var(--lightGrey) ;
+    box-shadow: 0 0 15px var(--lightGrey);
 }
 .person-msg div {
     position: absolute;
@@ -528,21 +520,21 @@ nav .toggle-button:hover {
     width: 20px;
     height: 20px;
     border-width: 20px;
-    border-color:transparent white transparent transparent;
+    border-color: transparent white transparent transparent;
     border-style: solid;
 }
 #myBlog {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.blog-group{
+.blog-group {
     width: 100%;
 }
 
 .blog {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -551,20 +543,21 @@ nav .toggle-button:hover {
     cursor: pointer;
     align-items: center;
 }
-.blog:hover h2{
+.blog:hover h2 {
     transition: color 0.3s ease;
-    color: var(--lightGreen)
+    color: var(--lightGreen);
 }
-.blog .times, .blog .read {
+.blog .times,
+.blog .read {
     color: var(--lightGrey);
     letter-spacing: 0.2em;
-    font-size:0.8em;    
+    font-size: 0.8em;
     text-transform: uppercase;
 }
-.blog h2{
+.blog h2 {
     font-weight: normal;
     padding: 0 0 20px 0;
-    margin:0;
+    margin: 0;
 }
 
 #myFooter {
@@ -572,7 +565,7 @@ nav .toggle-button:hover {
     background-color: var(--bgGrey);
     padding: 100px 50px;
 }
-#myFooter .row{
+#myFooter .row {
     display: flex;
     flex-direction: row;
 }
@@ -588,7 +581,7 @@ nav .toggle-button:hover {
 }
 #myFooter h4 {
     font-weight: normal;
-    font-size:1em;
+    font-size: 1em;
 }
 #myFooter p {
     font-size: 0.8em;
@@ -597,14 +590,14 @@ nav .toggle-button:hover {
 #myFooter .connect ul {
     display: flex;
     flex-direction: row;
-    padding:0;
+    padding: 0;
 }
 #myFooter .connect li {
-    margin:0 5px;
+    margin: 0 5px;
 }
 #myFooter .connect img {
-    width:1.5em;
-    height:1.5em;
+    width: 1.5em;
+    height: 1.5em;
     opacity: 1;
     transition: opacity 0.3s ease;
 }
@@ -612,7 +605,7 @@ nav .toggle-button:hover {
     opacity: 0.5;
 }
 
-.goBack-link img{
+.goBack-link img {
     display: none;
     position: fixed;
     bottom: 10%;
@@ -634,7 +627,6 @@ nav .toggle-button:hover {
     }
     100% {
         transform: translateY(0px);
-        
     }
 }
 
@@ -644,25 +636,26 @@ nav .toggle-button:hover {
     }
 }
 @media screen and (max-width: 992px) {
-    .logo, .toggle-button {
+    .logo,
+    .toggle-button {
         position: static;
         transform: translateY(0%);
         top: 0;
     }
     .links-container {
         height: 0;
-        overflow:hidden;
+        overflow: hidden;
         position: absolute;
-        top:140%;
-        width:100%;
+        top: 140%;
+        width: 100%;
         transition: var(--transition-all);
     }
     .links {
-        display:block;
+        display: block;
     }
-    .links a{
-        display:block;
-        padding:10px 20px;
+    .links a {
+        display: block;
+        padding: 10px 20px;
         margin: 0;
         transition: var(--transition-all);
     }
@@ -671,19 +664,20 @@ nav .toggle-button:hover {
         padding-left: 10px;
     }
     nav .toggle-button {
-        display:block;
+        display: block;
     }
     .main-container {
         width: var(--breakpoint-sm);
     }
     /* #myBio */
-    #myBio .myBio-img, #myBio .myBio-intro {
-        width:100%;
+    #myBio .myBio-img,
+    #myBio .myBio-intro {
+        width: 100%;
         padding: 0;
         /* padding: 0 40px; */
     }
-    #myBio .myBio-img img{
-        height:50vh;
+    #myBio .myBio-img img {
+        height: 50vh;
     }
     /* #myProtfolio */
     .protfolio {
@@ -692,31 +686,32 @@ nav .toggle-button:hover {
     /* #myProtfolio .col {
         flex-basis: 50%;
     } */
-    
+
     /* #myService */
     #myService .col {
         flex-basis: 50%;
     }
-    
+
     /* #myResume */
-    #myResume .resume-group{
+    #myResume .resume-group {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #myResume .resume-img, #myResume .resume-Exp {
-        width:100%;
+    #myResume .resume-img,
+    #myResume .resume-Exp {
+        width: 100%;
         padding: 0px;
     }
     #myResume .resume-img {
         padding-bottom: 30px;
     }
     /* #myFriend */
-    #myFriend .friend{
+    #myFriend .friend {
         flex-basis: 100%;
     }
     /* #myFooter  */
-    #myFooter .about-connect{
+    #myFooter .about-connect {
         flex-basis: 100%;
     }
     #myFooter .row {
@@ -746,5 +741,3 @@ nav .toggle-button:hover {
         margin: 0;
     }
 }
-
-
