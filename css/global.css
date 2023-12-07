@@ -5,7 +5,7 @@
     --darkBlack: rgb(43, 43, 43);
     --darkGrey: #6c757d;
     --lightGrey: #939393;
-    --drakGreen: #799664;
+    --darkGreen: #799664;
     --lightGreen: #96bb7c;
     --selectionBgColor: #daf2fd;
     --linkColor: #86d7f7;
@@ -51,7 +51,7 @@ a {
     width: 0;
     transition: var(--transition-all);
 }
-.hyperLink:hover:after {
+.workExp:hover .hyperLink:after {
     left: 0;
     width: 95%;
 }
@@ -221,7 +221,7 @@ nav .toggle-button:hover {
     background-color: var(--lightGreen);
 }
 #myBio .myBio-intro .hireMe:hover {
-    background-color: var(--drakGreen);
+    background-color: var(--darkGreen);
 }
 #myBio .myBio-intro .cv {
     background-color: var(--darkGrey);
@@ -230,7 +230,7 @@ nav .toggle-button:hover {
     background-color: var(--lightGrey);
 }
 
-#myProtfolio .protfolio-title {
+#myPortfolio .portfolio-title {
     margin-bottom: 10px;
 }
 .container-title {
@@ -239,7 +239,7 @@ nav .toggle-button:hover {
     margin-bottom: 100px;
 }
 
-#myProtfolio {
+#myPortfolio {
     display: block;
     text-align: center;
 }
@@ -262,65 +262,42 @@ nav .toggle-button:hover {
 .classification li:hover {
     color: var(--lightGreen);
 }
-/* .protfolio {
-    padding:20px 0;
-    display:flex;
-    flex-wrap: wrap;
-}
-#myProtfolio .col {
-    flex-basis: 33%;
-    padding:0 20px;
-}
-#myProtfolio .col .item{
-    overflow:hidden;
-    width:100%;
-    margin: 15px 0;
-}
-#myProtfolio .col img{
-    display: block;
-    width:100%;
-    object-fit: cover;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-#myProtfolio .col img:hover{
-    transform: scale(1.2); 
-}*/
-.protfolio {
+
+.portfolio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em 1em;
 }
 
-.protfolio .item {
+.portfolio .item {
     position: relative;
 }
-.protfolio .picture {
+.portfolio .picture {
     overflow: hidden;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--lightGrey);
 }
-.protfolio img {
+.portfolio img {
     display: block;
     width: 100%;
     object-fit: cover;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
 }
-.protfolio img:hover {
+.portfolio img:hover {
     transform: scale(1.2);
 }
-.protfolio .item:hover .description {
+.portfolio .item:hover .description {
     height: 163px;
     z-index: 998;
 }
-.protfolio .item:hover h4:after {
+.portfolio .item:hover h4:after {
     width: 100%;
     left: 0;
 }
 
-.protfolio .description {
+.portfolio .description {
     overflow: hidden;
     height: 0;
     width: 100%;
@@ -333,11 +310,11 @@ nav .toggle-button:hover {
     transition: var(--transition-all);
 }
 
-.protfolio .description h4 {
+.portfolio .description h4 {
     position: relative;
     margin: 0.5em 0.8em;
 }
-.protfolio .description h4:after {
+.portfolio .description h4:after {
     content: "";
     position: absolute;
     bottom: -10%;
@@ -348,16 +325,11 @@ nav .toggle-button:hover {
     transition: all 0.8s ease;
 }
 
-.protfolio .description div {
+.portfolio .description div {
     text-align: left;
     padding: 0.3em 0.8em;
     font-size: 0.8em;
 }
-/* .protfolio .description p {
-    text-align: left;
-    padding: 0 0.8em;
-    font-size: 0.8em;
-} */
 
 .classification {
     position: relative;
@@ -698,11 +670,11 @@ nav .toggle-button:hover {
     #myBio .myBio-img img {
         height: 50vh;
     }
-    /* #myProtfolio */
-    .protfolio {
+    /* #myPortfolio */
+    .portfolio {
         grid-template-columns: 1fr 1fr;
     }
-    /* #myProtfolio .col {
+    /* #myportfolio .col {
         flex-basis: 50%;
     } */
 
@@ -744,8 +716,8 @@ nav .toggle-button:hover {
         /* padding: 100px 15px; */
         width: 100%;
     }
-    /* #myProtfolio */
-    .protfolio {
+    /* #myportfolio */
+    .portfolio {
         grid-template-columns: 1fr;
     }
     /* #myHabit */
