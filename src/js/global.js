@@ -21,8 +21,8 @@ const navLinksLi_count = navLinksLi.length;
 let currentActiveLi = document.querySelector(".active");
 //取得各個main中div的位置
 const sectionTitle = document.querySelectorAll('div[id^="my"]');
-//取得goback link
-const gobackLink = document.querySelector(".goBack-link").childNodes[1];
+//取得go back links
+const goBackLink = document.querySelector(".goBack-link").childNodes[1];
 
 window.addEventListener("scroll", () => {
     //取得目前滾動Y軸的位置
@@ -39,7 +39,7 @@ window.addEventListener("scroll", () => {
     if (currentScrollY > halfVwHeight) {
         navbar.classList.add("awake");
         sleepBool = true;
-        gobackLink.style.display = "block";
+        goBackLink.style.display = "block";
     }
     if (currentScrollY < halfVwHeight && currentScrollY > navbarHeight) {
         navbar.classList.remove("awake");
@@ -47,7 +47,7 @@ window.addEventListener("scroll", () => {
             navbar.classList.add("sleep");
             sleepBool = false;
         }
-        gobackLink.style.display = "none";
+        goBackLink.style.display = "none";
     }
     navLinks.style.backgroundColor =
         currentScrollY > halfVwHeight ? "white" : null;
