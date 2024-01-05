@@ -1,4 +1,36 @@
-# personal-webpage
-Create from pure html, css, javascript
+# 個人網站
 
-Webpage url : https://doubletian-tw.github.io/personal-webpage/
+## 介紹
+
+歡迎來到我的一頁式個人網站專案，這個專案是用來展示我的前端技能，主要包括 HTML、CSS、以及 JavaScript。本專案特別注重切版和添加一些簡單的動態效果，以下是這個專案的詳細資訊。
+
+## 預覽我的網頁
+
+https://doubletian-tw.github.io/personal-webpage/
+
+## 功能特點
+
+-   切版實踐： 使用 HTML 和 CSS 實現精美的頁面設計。
+-   簡單的動態效果： 使用 JavaScript 添加一些基本的動態效果，例如 jumpSmooth, navbar scrollSmooth 等。
+
+## 概要
+
+這個個人網站專案包含以下主要內容：
+
+-   關於我： 簡介我自己，我的背景和興趣。
+-   個人作品： 展示我過去的作品，包括大學專題、小工具、以及前端作品。
+-   興趣： 我的興趣和愛好。
+-   履歷： 我的工作和教育經歷。
+-   部落格： 一些技術和非技術相關的文章。
+-   聯絡資訊： 與我聯繫。
+
+## 專案結構
+
+```
+- /css     #存放CSS
+- /images  #存放專案使用圖片
+- /js      #存放Javascript腳本
+index.html #首頁
+```
+
+### 感謝您對我的個人網站專案的興趣！如果您有任何建議或問題，請隨時與我聯繫。
