@@ -121,7 +121,7 @@ function displayPortfolio(items) {
         .join("");
     portfolio.innerHTML = result;
 
-    console.log(hasTouchScreen);
+    // console.log(hasTouchScreen);
     if (hasTouchScreen === true) clickPictureOnMobile();
     // hoverPicture();
 }
