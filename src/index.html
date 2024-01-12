@@ -11,9 +11,12 @@
     <link rel="icon" href="./images/icon-cat.png">
     <title>Welcome to PaddyTian World</title>
     <base target="_blank">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" defer></script>
     <script type="module" src="./js/equipmentDetection.js" defer></script>
     <script src="./js/global.js" defer></script>
     <script type="module" src="./js/protfolio.js" defer></script>
+    <script type="module" src="./js/gsap.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -21,7 +24,7 @@
         <header>
             <div class="bg">
             </div>
-            <div class="intro">
+            <div class="intro gs-absolute">
                 <h1>
                     I'm Paddy Tian <br>
                     A Front-end developer
@@ -57,11 +60,11 @@
     <main>
         <!-- About me -->
         <div id="myBio" class="main-container">
-            <div class="myBio-img">
+            <div class="myBio-img gs-fromLeft gs-reveal">
                 <img src="./images/myBio-image.jpg" alt="This's me" oncontextmenu="return false;">
             </div>
-            <div class="myBio-intro">
-                <div class="text">
+            <div class="myBio-intro ">
+                <div class="text gs-fromRight gs-reveal">
                     <h2>About me</h2>
                     <p> 
                         嗨，我是田，稻田的田，歡迎來我的網頁，這是我第一份作品，使用純HTML,CSS,JS
@@ -96,40 +99,45 @@
                         以下是經歷中學過的技能
                     </p>
                 </div>
-                <div class="skill">
+                <div class="skill gs-fromLeft gs-reveal">
                     <h2>Markup Language</h2>
                     <p>HTML</p>
                     <p>CSS</p>
+                </div>
+                <div class="skill gs-fromRight gs-reveal">
                     <h2>Program Language</h2>
                     <p>Javascript</p>
                     <p>C#</p>
                     <p>Visual Basic</p>
+                </div>
+                <div class="skill gs-fromRight gs-reveal">
                     <h2>Framework</h2>
                     <p>ReactJs</p>
                 </div>
-                <div class="button">
+
+                <div class="button gs-fromLeft gs-reveal">
                     <a class="hireMe" href="javascript:void(0)">HIRE ME</a>
                     <a class="cv" href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian">View My CV</a>
                 </div>
             </div>
         </div>
         <!-- My Portfolio -->
-        <div id="myPortfolio" class="main-container">
-            <div class="portfolio-title">
+        <div id="myPortfolio" class="main-container gs-reveal dynamicData">
+            <div class="portfolio-title ">
                 <h1>My Portfolio</h1>
             </div>
             <div class="classification">
-            </div>
+            </div>            
             <div class="portfolio">
             </div>
         </div>
         <!-- My Habit -->
         <div id="myHabit" class="main-container">
-            <div class="container-title">
+            <div class="container-title gs-reveal">
                 <h1>Habit</h1>
             </div>
             <div class="service-group">
-                <div class="col">
+                <div class="col gs-reveal gs-spin">
                     <div class="content">
                         <div class="content-header">
                             <img src="./images/habit-dancing.png" alt="">
@@ -143,7 +151,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col gs-reveal gs-spin">
                     <div class="content">
                         <div class="content-header">
                             <img src="./images/habit-aoe.png" alt="">
@@ -159,7 +167,7 @@
                         
                     </div>
                 </div>
-                <div class="col">
+                <div class="col gs-reveal gs-spin">
                     <div class="content">
                         <div class="content-header">
                             <img src="./images/habit-riding.png" alt="">
@@ -176,14 +184,14 @@
         </div>
         <!-- My Resume -->
         <div id="myResume" class="main-container">
-            <div class="container-title">
+            <div class="container-title gs-reveal">
                 <h1>Resume</h1>
             </div>
             <div class="resume-group">
-                <div class="resume-img">
+                <div class="resume-img gs-reveal gs-fromLeft">
                     <img src="./images/myResume-image.jpg" alt="" oncontextmenu="return false;">
                 </div>
-                <div class="resume-Exp">
+                <div class="resume-Exp gs-reveal gs-fromRight">
                     <div class="Exp-block">
                         <h2>Work Experience</h2>
                         <div class="workExp">
@@ -288,10 +296,10 @@
         </div>
         <!-- My Blog -->
         <div id="myBlog" class="main-container">
-            <div class="container-title">
+            <div class="container-title gs-reveal">
                 <h1>Read my blog</h1>
             </div>
-            <div class="blog-group">
+            <div class="blog-group gs-reveal">
                 <div class="blog">
                     <a href="https://www.instagram.com/p/Cuj2-98PCCI/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                         <div>

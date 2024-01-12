@@ -26,7 +26,6 @@ body {
 ::selection {
     background: var(--selectionBgColor);
 }
-
 a {
     text-decoration: none;
 }
@@ -73,6 +72,9 @@ ul {
     background-attachment: fixed;
     background-image: url("../images/header-image.jpg");
 }
+header {
+    position: relative;
+}
 header .intro {
     position: absolute;
     color: white;
@@ -99,11 +101,13 @@ nav {
     background-image: url("../images/icon-cat.png");
     background-repeat: no-repeat;
     background-size: contain;
-    top: 50%;
-    transform: translateY(-50%);
     margin: 0 50px;
     width: 1.7em;
     height: 1.7em;
+    transition: all 0.5s ease;
+}
+.logo:hover {
+    transform: rotate(30deg) !important;
 }
 .links {
     display: flex;
@@ -257,10 +261,12 @@ nav .toggle-button:hover {
     padding: 10px 20px;
     color: var(--lightGrey);
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 .classification li:hover {
     color: var(--lightGreen);
+    text-shadow: 0 0 5px 1px grey;
+    /* font-size: 1.2rem; */
 }
 
 .portfolio {
@@ -351,6 +357,13 @@ nav .toggle-button:hover {
     display: block;
     flex-basis: 33%;
     padding: 0 1.1em 4.5em 1.1em;
+}
+
+#myHabit .content {
+    transition: all 0.3s ease;
+}
+#myHabit .content:hover {
+    transform: rotate(5deg);
 }
 #myHabit .content {
     border: 1px solid var(--lightGrey);
@@ -590,10 +603,12 @@ nav .toggle-button:hover {
     width: 1.2em;
     height: 1.2em;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
-#myFooter .connect img:hover {
+#myFooter .connect img:hover,
+#myFooter .contact img:hover {
     opacity: 0.5;
+    transform: rotate(40deg);
 }
 
 .goBack-link img {
@@ -608,7 +623,9 @@ nav .toggle-button:hover {
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-
+.gs-reveal {
+    will-change: transform, opacity;
+}
 @keyframes goBack-breath {
     0% {
         transform: translateY(0px);
@@ -630,8 +647,8 @@ nav .toggle-button:hover {
     .logo,
     .toggle-button {
         position: static;
-        transform: translateY(0%);
-        top: 0;
+        /* transform: translateY(0%);
+        top: 0; */
     }
     .links-container {
         height: 0;
