@@ -1,24 +1,22 @@
 {
     "name": "personal-webpage",
-    "version": "1.0.0",
-    "description": "Create from pure html, css, javascript",
-    "main": "index.js",
+    "private": true,
+    "version": "1.1.0",
+    "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
         "deploy": "gh-pages -d src"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/DoubleTian-tw/personal-webpage.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/DoubleTian-tw/personal-webpage/issues"
-    },
-    "homepage": "https://github.com/DoubleTian-tw/personal-webpage#readme",
     "dependencies": {
+        "vue": "^3.4.21",
         "gh-pages": "^6.1.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.4",
+        "typescript": "^5.2.2",
+        "vite": "^5.2.0",
+        "vue-tsc": "^2.0.6"
     }
 }
