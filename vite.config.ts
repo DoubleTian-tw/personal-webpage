@@ -5,8 +5,13 @@ import alias from "@rollup/plugin-alias";
 export default defineConfig({
     plugins: [
         vue(),
-        alias({
-            entries: [{ find: "@", replacement: "/src" }],
-        }),
+        // alias({
+        //     entries: [{ find: "@", replacement: "/src" }],
+        // }),
     ],
+    resolve: {
+        alias: {
+            "@": "/src",
+        },
+    },
 });
