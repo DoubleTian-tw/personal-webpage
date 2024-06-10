@@ -13,15 +13,17 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style lang="scss" scoped>
+header {
+    position: relative;
+}
 .bg {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* background-image: url("../images/header-image.jpg"); */
     background-image: url("@/assets/header-image.jpg");
 }
 .intro {
