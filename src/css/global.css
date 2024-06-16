@@ -234,19 +234,19 @@ nav .toggle-button:hover {
     background-color: var(--lightGrey);
 }
 */
-#myPortfolio .portfolio-title {
+/* #myPortfolio .portfolio-title {
     margin-bottom: 10px;
-}
+} */
 .container-title {
     width: 100%;
     text-align: center;
     margin-bottom: 100px;
 }
 
-#myPortfolio {
+/* #myPortfolio {
     display: block;
     text-align: center;
-}
+} 
 .classification {
     width: 100%;
 }
@@ -266,8 +266,8 @@ nav .toggle-button:hover {
 .classification li:hover {
     color: var(--lightGreen);
     text-shadow: 0 0 5px 1px grey;
-    /* font-size: 1.2rem; */
 }
+*/
 
 .portfolio {
     display: grid;
@@ -680,8 +680,8 @@ nav .toggle-button:hover {
     /* #myBio */
     #myBio .myBio-img,
     #myBio .myBio-intro {
-        width: 100%;
-        padding: 0;
+        /* width: 100%;
+        padding: 0; */
         /* padding: 0 40px; */
     }
     #myBio .myBio-img img {
