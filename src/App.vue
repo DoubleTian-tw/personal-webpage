@@ -2,24 +2,21 @@
 import Header from "@/components/Header.vue";
 import Navbar from "@/components/Navbar.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import Portfolio from "@/components/Portfolio.vue";
 </script>
 
 <template>
     <!-- Header -->
-    <div id="myHome" class="header-container">
+    <div id="myHome" class="relative w-full h-screen">
         <Header></Header>
         <Navbar></Navbar>
         <AboutMe></AboutMe>
+        <Portfolio></Portfolio>
     </div>
     <main></main>
 </template>
 
-<style scoped>
-.header-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
+<style lang="scss" scoped>
 .main-container {
     padding: 100px 50px;
     margin: 0 auto;
