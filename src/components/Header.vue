@@ -1,37 +1,18 @@
 <template>
-    <header>
-        <div class="bg"></div>
-        <div class="intro gs-absolute">
+    <header class="relative">
+        <div
+            class="w-full h-screen bg-center bg-no-repeat bg-cover bg-fixed bg-[url('@/assets/header-image.jpg')]"></div>
+        <div
+            class="gs-absolute absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <h1>
                 I'm Paddy Tian <br />
                 A Front-end developer
             </h1>
-            <p>Nice to meet you</p>
+            <p class="text-center">Nice to meet you</p>
         </div>
     </header>
 </template>
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped>
-header {
-    position: relative;
-}
-.bg {
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url("@/assets/header-image.jpg");
-}
-.intro {
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-</style>
+<style lang="scss" scoped></style>

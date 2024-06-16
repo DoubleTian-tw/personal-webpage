@@ -1,14 +1,17 @@
 <template>
     <!-- About me -->
-    <div id="myBio" class="main-container">
-        <div class="myBio-img gs-fromLeft gs-reveal">
+    <div
+        id="myBio"
+        class="main-container max-sm:gap-0 gap-24 flex h-auto max-sm:flex-col">
+        <div class="gs-fromLeft gs-reveal flex-1">
             <img
+                class="w-full h-[80vh] max-sm:h-[50vh] object-cover object-center"
                 src="@/assets/myBio-image.jpg"
                 alt="This's me"
                 oncontextmenu="return false;" />
         </div>
-        <div class="myBio-intro">
-            <div class="text gs-fromRight gs-reveal">
+        <div class="flex-1">
+            <div class="gs-fromRight gs-reveal pb-7">
                 <h2>About me</h2>
                 <p>
                     嗨，我是田，稻田的田，因為喜歡從無到有的Coding過程，熱衷成為一名前端工作者。
@@ -48,28 +51,28 @@
                 </p>
                 <p>最後的最後，想認識或是Hire我都非常歡迎 !</p>
             </div>
-            <div class="skill gs-fromLeft gs-reveal">
+            <div class="gs-fromLeft gs-reveal pb-7">
                 <h2>Markup Language</h2>
                 <p>HTML</p>
                 <p>CSS</p>
             </div>
-            <div class="skill gs-fromRight gs-reveal">
+            <div class="gs-fromRight gs-reveal pb-7">
                 <h2>Program Language</h2>
                 <p>Javascript</p>
                 <p>C#</p>
                 <p>Visual Basic</p>
             </div>
-            <div class="skill gs-fromRight gs-reveal">
+            <div class="gs-fromRight gs-reveal pb-7">
                 <h2>Framework</h2>
                 <p>ReactJs</p>
             </div>
 
-            <div class="button gs-fromLeft gs-reveal">
+            <div class="gs-fromLeft gs-reveal text-left">
                 <a
-                    class="hireMe"
-                    href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian"
-                    >HIRE ME</a
-                >
+                    class="bg-lightGreen hover:bg-darkGreen inline-block text-white no-underline py-4 px-7 rounded-[30px] mb-2.5 transition-[background-color] duration-300 ease"
+                    href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian">
+                    HIRE ME
+                </a>
             </div>
         </div>
     </div>
@@ -77,52 +80,4 @@
 
 <script setup></script>
 
-<style lang="scss" scoped>
-#myBio {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-}
-
-.myBio-img {
-    width: 60%;
-    padding: 0 100px 0 20px;
-
-    img {
-        width: 100%;
-        height: 80vh;
-        object-fit: cover;
-        object-position: 60% 100%;
-    }
-}
-.myBio-intro {
-    width: 40%;
-    .text,
-    .skill {
-        padding-bottom: 30px;
-    }
-    .button a {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-        padding: 15px 30px;
-        border-radius: 30px;
-        margin-bottom: 10px;
-        transition: background-color 0.3s ease;
-    }
-}
-.hireMe {
-    background-color: var(--lightGreen);
-
-    &:hover {
-        background-color: var(--darkGreen);
-    }
-    .cv {
-        background-color: var(--darkGrey);
-        &:hover {
-            background-color: var(--lightGrey);
-        }
-    }
-}
-</style>
+<style lang="scss" scoped></style>
