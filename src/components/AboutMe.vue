@@ -17,20 +17,19 @@
                     嗨，我是田，稻田的田，因為喜歡從無到有的Coding過程，熱衷成為一名前端工作者。
                 </p>
                 <p>
-                    過去是個平凡無奇喜歡跳舞的男子，在亞洲文化下求學只為了成績，上了大學也認真玩了<a
+                    過去是個平凡無奇喜歡跳舞的男子，在亞洲文化下求學只為了成績，上了大學也認真玩了
+                    <a
                         class="hyperLink"
                         href="https://youtu.be/qZGN5PD_24k?si=ygPXyn0L1R89LhAN&t=58"
-                        >四年的社團</a
-                    >，出了社會找了安穩的工作做了三年多，總覺得自己還是喜歡寫Code做一些有趣的事情，先是換了份半導體工作，雖然充滿挑戰但依然不是興趣所在，因緣際會下接觸到了網頁，才開啟了<a
-                        class="hyperLink"
-                        href="https://postimg.cc/WtVYykJd"
+                        >四年的社團 </a
+                    >，出了社會找了安穩的工作做了三年多，總覺得自己還是喜歡寫Code做一些有趣的事情，先是換了份半導體工作，雖然充滿挑戰但依然不是興趣所在，因緣際會下接觸到了網頁，才開啟了
+                    <a class="hyperLink" href="https://postimg.cc/WtVYykJd"
                         >我新的世界</a
                     >。
                 </p>
                 <p>
-                    全職自學是過去不曾做過的決定，踏出舒適圈讓我感到恐懼但興奮，慶幸過去有好好<a
-                        class="hyperLink"
-                        href="https://postimg.cc/kBLfC6p3"
+                    全職自學是過去不曾做過的決定，踏出舒適圈讓我感到恐懼但興奮，慶幸過去有好好
+                    <a class="hyperLink" href="https://postimg.cc/kBLfC6p3"
                         >理財</a
                     >，才能在沒有收入來源的情況下穩定成長。
                 </p>
@@ -43,10 +42,11 @@
                     VBA把資料自動化整理。
                 </p>
                 <p>
-                    大概就是這些經驗讓我覺得Coding很有趣，當然還有<a
+                    大概就是這些經驗讓我覺得Coding很有趣，當然還有
+                    <a
                         class="hyperLink"
                         href="https://youtube.com/playlist?list=PLup9hQduf8T_Pkk3-Yso3KPt3kTbigHAT&si=AgRpeudz_YO6nXGw"
-                        >大學專題</a
+                        >大學專題 </a
                     >，想當初1人建置場景、寫程式和設定VR眼鏡，而且我的電腦沒顯卡跑不動，還跑去跟同組同學借電腦來做，真的是很難忘的體驗...
                 </p>
                 <p>最後的最後，想認識或是Hire我都非常歡迎 !</p>

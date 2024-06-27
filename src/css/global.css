@@ -237,11 +237,11 @@ nav .toggle-button:hover {
 /* #myPortfolio .portfolio-title {
     margin-bottom: 10px;
 } */
-.container-title {
+/* .container-title {
     width: 100%;
     text-align: center;
     margin-bottom: 100px;
-}
+} */
 
 /* #myPortfolio {
     display: block;
@@ -341,7 +341,7 @@ nav .toggle-button:hover {
     position: relative;
 }
 
-#myHabit {
+/* #myHabit {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -376,30 +376,30 @@ nav .toggle-button:hover {
     height: 80px;
     border-radius: 100%;
     box-shadow: 0 0 10px var(--lightGrey);
-}
-.content > p {
+} */
+/* .content > p {
     text-align: left;
-}
-#myResume {
+} */
+/* #myResume {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-#myResume .resume-group {
+} */
+/* #myResume .resume-group {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-}
-#myResume .resume-img {
+} */
+/* #myResume .resume-img {
     width: 40%;
-}
-#myResume .resume-img img {
+} */
+/* #myResume .resume-img img {
     width: 100%;
     height: 65vh;
     object-fit: cover;
-}
-#myResume .resume-Exp {
+} */
+/* #myResume .resume-Exp {
     width: 60%;
     padding-left: 80px;
 }
@@ -407,11 +407,11 @@ nav .toggle-button:hover {
     margin-top: 0;
     margin-bottom: 20px;
     font-weight: normal;
-}
-#myResume .Exp-block {
+} */
+/* #myResume .Exp-block {
     margin-bottom: 50px;
-}
-
+} */
+/* 
 #myResume .workExp {
     display: flex;
     justify-content: space-between;
@@ -453,7 +453,7 @@ nav .toggle-button:hover {
 }
 #myResume .workExp .times {
     text-align: right;
-}
+} */
 
 #myFriend {
     display: flex;

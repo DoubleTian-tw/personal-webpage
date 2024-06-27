@@ -34,6 +34,16 @@
 <script setup lang="ts"></script>
 
 <style lang="scss" scoped>
+a {
+    display: block;
+    margin: 0 20px;
+    opacity: 0.5;
+    font-size: 1em;
+    color: white;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
 .active {
     opacity: 1;
 }
