@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import CHeader from "@/components/CHeader.vue";
-import CNavBar from "@/components/CNavbar.vue";
-import AboutMe from "@/components/AboutMe.vue";
-import CPortfolio from "@/components/CPortfolio.vue";
-import MyHabit from "@/components/MyHabit.vue";
-import MyResume from "@/components/MyResume.vue";
-import MyBlog from "@/components/MyBlog.vue";
+import Header from "@/components/CHeader.vue";
+import NavBar from "@/components/CNavbar.vue";
+import AboutMe from "@/components/AboutMe/CAboutMe.vue";
+import Portfolio from "@/components/CPortfolio.vue";
+import MyHabit from "@/components/MyHabit/CMyHabit.vue";
+import MyResume from "@/components/CMyResume.vue";
+import MyBlog from "@/components/CMyBlog.vue";
 </script>
 
 <template>
     <!-- Header -->
     <div id="myHome" class="relative w-full h-screen">
-        <CHeader></CHeader>
-        <CNavBar></CNavBar>
+        <Header></Header>
+        <NavBar></NavBar>
         <AboutMe></AboutMe>
-        <CPortfolio></CPortfolio>
+        <Portfolio></Portfolio>
         <MyHabit></MyHabit>
         <MyResume></MyResume>
         <MyBlog></MyBlog>
