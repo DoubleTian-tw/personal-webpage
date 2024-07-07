@@ -2,10 +2,11 @@
 import Header from "@/components/CHeader.vue";
 import NavBar from "@/components/CNavbar.vue";
 import AboutMe from "@/components/AboutMe/CAboutMe.vue";
-import Portfolio from "@/components/CPortfolio.vue";
+import MyPortfolio from "@/components/MyPortfolio/CMyPortfolio.vue";
 import MyHabit from "@/components/MyHabit/CMyHabit.vue";
-import MyResume from "@/components/CMyResume.vue";
-import MyBlog from "@/components/CMyBlog.vue";
+import MyResume from "@/components/MyResume/CMyResume.vue";
+import MyBlog from "@/components/MyBlog/CMyBlog.vue";
+import Footer from "@/components/Footer/CFooter.vue";
 </script>
 
 <template>
@@ -14,10 +15,11 @@ import MyBlog from "@/components/CMyBlog.vue";
         <Header></Header>
         <NavBar></NavBar>
         <AboutMe></AboutMe>
-        <Portfolio></Portfolio>
+        <MyPortfolio></MyPortfolio>
         <MyHabit></MyHabit>
         <MyResume></MyResume>
         <MyBlog></MyBlog>
+        <Footer></Footer>
     </div>
     <main></main>
 </template>
