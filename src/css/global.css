@@ -510,56 +510,56 @@ nav .toggle-button:hover {
     border-style: solid;
 }
 #myBlog {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .blog-group {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .blog {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0 20px;
     padding-top: 20px;
     cursor: pointer;
-    align-items: center;
+    align-items: center; */
 }
 .blog:hover h2 {
-    transition: color 0.3s ease;
-    color: var(--lightGreen);
+    /* transition: color 0.3s ease;
+    color: var(--lightGreen); */
 }
 .blog .times,
 .blog .read {
-    color: var(--lightGrey);
+    /* color: var(--lightGrey);
     letter-spacing: 0.2em;
     font-size: 0.8em;
-    text-transform: uppercase;
+    text-transform: uppercase; */
 }
 .blog h2 {
-    font-weight: normal;
+    /* font-weight: normal;
     color: var(--darkBlack);
     padding: 0 0 20px 0;
-    margin: 0;
+    margin: 0; */
 }
 
 #myFooter {
-    display: block;
+    /* display: block;
     background-color: var(--bgGrey);
-    padding: 100px 50px;
+    padding: 100px 50px; */
 }
 #myFooter .row {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; */
 }
 #myFooter .center {
-    justify-content: center;
+    /* justify-content: center; */
 }
 #myFooter .about-connect {
     /* flex-basis: 70%;
@@ -590,25 +590,25 @@ nav .toggle-button:hover {
     margin-left: 0.5rem;
 }
 #myFooter .connect ul {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    padding: 0;
+    padding: 0; */
 }
 
 #myFooter .connect li {
-    margin: 0 5px;
+    /* margin: 0 5px; */
 }
 #myFooter .connect img,
 #myFooter .contact img {
-    width: 1.2em;
+    /* width: 1.2em;
     height: 1.2em;
     opacity: 1;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; */
 }
 #myFooter .connect img:hover,
 #myFooter .contact img:hover {
-    opacity: 0.5;
-    transform: rotate(40deg);
+    /* opacity: 0.5;
+    transform: rotate(40deg); */
 }
 
 .goBack-link img {

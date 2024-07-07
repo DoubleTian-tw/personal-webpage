@@ -102,6 +102,42 @@
         text-align: center;
         margin-bottom: 100px;
     }
+    .color-darkBlack {
+        color: var(--darkBlack);
+    }
+    .color-darkGrey {
+        color: var(--darkGrey);
+    }
+    .color-lightGrey {
+        color: var(--lightGrey);
+    }
+    .color-darkGreen {
+        color: var(--darkGreen);
+    }
+    .color-lightGreen {
+        color: var(--lightGreen);
+    }
+    .color-selectionBgColor {
+        color: var(--selectionBgColor);
+    }
+    .color-linkColor {
+        color: var(--linkColor);
+    }
+    .color-linkActiveColor {
+        color: var(--linkActiveColor);
+    }
+    .color-workExp-colorGreen {
+        color: var(--workExp-colorGreen);
+    }
+    .color-workExp-bgGreen {
+        color: var(--workExp-bgGreen);
+    }
+    .color-bgGrey {
+        color: var(--bgGrey);
+    }
+    .transition-300-all {
+        transition: var(--transition-all);
+    }
 }
 
 :root {
