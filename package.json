@@ -12,12 +12,14 @@
     "dependencies": {
         "eslint-plugin-vue": "^9.26.0",
         "gh-pages": "^6.1.0",
+        "lodash-es": "^4.17.21",
         "scss": "^0.2.4",
         "vue": "^3.4.21"
     },
     "devDependencies": {
         "@eslint/js": "^9.4.0",
         "@rollup/plugin-alias": "^5.1.0",
+        "@types/lodash-es": "^4.17.12",
         "@vitejs/plugin-vue": "^5.0.4",
         "autoprefixer": "^10.4.19",
         "globals": "^15.4.0",
