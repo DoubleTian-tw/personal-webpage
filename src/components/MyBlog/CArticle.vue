@@ -24,6 +24,6 @@ const props = defineProps<ArticleProps>();
 
 <style lang="scss" scoped>
 .text-style {
-    @apply lightGrey text-[16px] tracking-[3px] uppercase;
+    @apply color-lightGrey text-[16px] tracking-[3px] uppercase;
 }
 </style>
