@@ -1,5 +1,5 @@
 <template>
-    <div class="workExp flex justify-between py-5">
+    <div class="workExp cursor-pointer flex justify-between py-5">
         <div class="detail text-left">
             <h4 class="mb-5 mt-0 font-normal">{{ props.jobTitle }}</h4>
             <div class="company">
