@@ -7,6 +7,7 @@ import MyHabit from "@/components/MyHabit/CMyHabit.vue";
 import MyResume from "@/components/MyResume/CMyResume.vue";
 import MyBlog from "@/components/MyBlog/CMyBlog.vue";
 import Footer from "@/components/Footer/CFooter.vue";
+import GoBack from "@/components/CGoBack.vue";
 </script>
 
 <template>
@@ -14,14 +15,16 @@ import Footer from "@/components/Footer/CFooter.vue";
     <div id="myHome" class="relative w-full h-screen">
         <Header></Header>
         <NavBar></NavBar>
+    </div>
+    <main>
         <AboutMe></AboutMe>
         <MyPortfolio></MyPortfolio>
         <MyHabit></MyHabit>
         <MyResume></MyResume>
         <MyBlog></MyBlog>
-        <Footer></Footer>
-    </div>
-    <main></main>
+    </main>
+    <Footer></Footer>
+    <GoBack></GoBack>
 </template>
 
 <style lang="scss" scoped></style>
