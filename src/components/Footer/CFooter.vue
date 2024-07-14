@@ -1,32 +1,30 @@
 <template>
-    <footer>
-        <div id="myFooter" class="block bg-bgGrey px-[100px] py-[50px]">
-            <div class="row">
-                <div>
-                    <h4>Connect</h4>
-                    <ul class="flex flex-row p-0">
-                        <Connect
-                            v-for="(connect, index) in connects"
-                            v-bind="connect"
-                            :key="index"></Connect>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <ul class="flex flex-col text-left">
-                        <Contact
-                            v-for="(contact, index) in contacts"
-                            :key="index"
-                            v-bind="contact"></Contact>
-                    </ul>
-                </div>
+    <footer id="myFooter" class="block bg-[--bgGrey] px-[100px] py-[50px]">
+        <div class="row">
+            <div>
+                <h4>Connect</h4>
+                <ul class="flex flex-row p-0">
+                    <Connect
+                        v-for="(connect, index) in connects"
+                        v-bind="connect"
+                        :key="index"></Connect>
+                </ul>
             </div>
-            <div class="row">
-                <p>
-                    Copyright © {{ getFullYear }}
-                    All rights reserved | This webpage is made by PaddyTian.
-                </p>
+            <div>
+                <h4>Contact</h4>
+                <ul class="flex flex-col text-left">
+                    <Contact
+                        v-for="(contact, index) in contacts"
+                        :key="index"
+                        v-bind="contact"></Contact>
+                </ul>
             </div>
+        </div>
+        <div class="row">
+            <p>
+                Copyright © {{ getFullYear }}
+                All rights reserved | This webpage is made by PaddyTian.
+            </p>
         </div>
     </footer>
 </template>
