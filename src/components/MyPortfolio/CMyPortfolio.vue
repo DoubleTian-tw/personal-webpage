@@ -13,7 +13,7 @@
                     :key="index" />
             </ul>
         </div>
-        <div class="portfolio grid grid-cols-1 gap-4">
+        <div class="portfolio grid grid-cols-3 gap-4">
             <Portfolio
                 v-for="(portfolio, index) in portfolios"
                 v-bind="portfolio"
@@ -28,12 +28,18 @@ import Classification from "./CClassification.vue";
 import Portfolio from "./CPortfolio.vue";
 import { uniqBy } from "lodash-es";
 import { classificationProps, portfolioProps } from "./interface";
+import seniorProject from "@/assets/portfolio-senior-project.jpg";
+import previewImage from "@/assets/portfolio-preview-image.jpg";
+import chatgptIntro from "@/assets/portfolio-chatgpt-intro.jpg";
+import workHelpingTool from "@/assets/portfolio-work-helping-tool.jpg";
+import pokemonGym from "@/assets/portfolio-pokemonGym.jpg";
+
 const portfolios = ref<portfolioProps[]>([
     {
         id: 1,
         classification: "Game",
         name: "老七佳部落導覽",
-        src: "./images/portfolio-senior-project.jpg",
+        src: seniorProject,
         link: "https://www.facebook.com/csdgohome",
         description: `<p>透過Unity引擎結合VR眼鏡，在遊戲世界中體驗當地寫實的老七佳部落</p>
         <p>專題取名回佳，用意希望族人可以多回家看看自己部落的美</p>
@@ -43,7 +49,7 @@ const portfolios = ref<portfolioProps[]>([
         id: 2,
         classification: "Web",
         name: "個人網站",
-        src: "./images/portfolio-preview-image.jpg",
+        src: previewImage,
         link: "https://github.com/DoubleTian-tw/personal-webpage/tree/main",
         description: `<p>就是你現在看到的網頁，在About me的部分已經大致上簡單介紹</p>
         <p></p>
@@ -53,7 +59,7 @@ const portfolios = ref<portfolioProps[]>([
         id: 3,
         classification: "Slides",
         name: "ChatGPT的介紹簡報",
-        src: "./images/portfolio-chatgpt-intro.jpg",
+        src: chatgptIntro,
         link: "https://1drv.ms/p/s!AqpWpkjGJfWehgXQxjPbZuyio4SG?e=l5Ti0N",
         description: `<p>在2022年底時突然崛起的chatGPT顛覆整個世界的認知，
         越來越多話題都開始搭配著生成式AI所延伸</p>
@@ -64,7 +70,7 @@ const portfolios = ref<portfolioProps[]>([
         id: 4,
         classification: "Tool",
         name: "方便辦公時的小工具",
-        src: "./images/portfolio-work-helping-tool.jpg",
+        src: workHelpingTool,
         link: "https://github.com/DoubleTian-tw/Fujitec_SpecTool",
         description: `<p>第一支side project，其目的是解決每日重複性的操作，
         例如開啟、建立指定資料夾、操作excel等等，大幅縮短惱人不必要的人工操作</p>`,
@@ -73,7 +79,7 @@ const portfolios = ref<portfolioProps[]>([
         id: 5,
         classification: "Web",
         name: "Pokemon Gym",
-        src: "./images/portfolio-pokemonGym.jpg",
+        src: pokemonGym,
         link: "https://doubletian-tw.github.io/pokemon-Gym/",
         description: `<p>在玩Pokemon go時每次打道館都需要查相剋屬性，時在太麻煩又很難記住每一隻角色，到不如來做一個網頁來解決吧! 於是乎Pokemon Gym就誕生了!</p>`,
     },
