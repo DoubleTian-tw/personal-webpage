@@ -1,23 +1,16 @@
 <template>
-    <div
-        id="myPortfolio"
-        class="main-container gs-reveal dynamicData block text-center">
+    <div id="myPortfolio" class="main-container gs-reveal dynamicData block text-center">
         <div class="mb-2.5">
             <h1>My Portfolio</h1>
         </div>
-        <div class="">
-            <ul class="flex flex-wrap justify-center items-center p-0">
-                <Classification
-                    v-for="(classification, index) in classifications"
-                    v-bind="classification"
-                    :key="index" />
-            </ul>
-        </div>
-        <div class="portfolio grid grid-cols-3 gap-4">
-            <Portfolio
-                v-for="(portfolio, index) in portfolios"
-                v-bind="portfolio"
-                :key="index" />
+        <ul class="flex flex-wrap justify-center items-center p-0">
+            <Classification v-for="(classification, index) in classifications" v-bind="classification" :key="index"
+                @click="() => { handleCurrentClassification(classification) }" />
+        </ul>
+        <div class="portfolio grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-4">
+            <TransitionGroup name="portfolio">
+                <Portfolio v-for="(portfolio, index) in filterPortfolio" v-bind="portfolio" :key="index" />
+            </TransitionGroup>
         </div>
     </div>
 </template>
@@ -85,13 +78,45 @@ const portfolios = ref<portfolioProps[]>([
     },
 ]);
 
-const classifications = computed<classificationProps[]>(() =>
-    uniqBy(portfolios.value, "classification").map((item) => {
+const classifications = computed<classificationProps[]>(() => {
+    const allType: classificationProps[] = [{
+        classification: "All"
+    }]
+    const uniqItems = uniqBy(portfolios.value, "classification").map((item) => {
         return {
             classification: item.classification,
         };
     })
-);
+
+    return allType.concat(uniqItems)
+});
+const currentClassification = ref(classifications.value[0]);
+const handleCurrentClassification = (classification: classificationProps) => {
+    currentClassification.value = classification;
+}
+const filterPortfolio = computed<portfolioProps[]>(() => {
+    if (currentClassification.value.classification === "All") {
+        return portfolios.value
+    }
+    return portfolios.value.filter((item) => item.classification === currentClassification.value.classification)
+})
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.portfolio-enter-active,
+.portfolio-leave-active {
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio-enter-from,
+.portfolio-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.portfolio-enter-to,
+.portfolio-leave-from {
+    opacity: 1;
+    transform: translateX(0px);
+}
+</style>
