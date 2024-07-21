@@ -1,15 +1,10 @@
 <template>
-    <div
-        id="myHabit"
-        class="main-container flex flex-col justify-center items-center text-center">
+    <div id="myHabit" class="main-container flex flex-col justify-center items-center">
         <div class="container-title gs-reveal">
             <h1>Habit</h1>
         </div>
-        <div class="flex flex-wrap flex-row">
-            <Card
-                v-for="(habit, index) in habits"
-                :key="index"
-                v-bind="habit"></Card>
+        <div class="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-8">
+            <Card v-for="(habit, index) in habits" :key="index" v-bind="habit"></Card>
         </div>
     </div>
 </template>

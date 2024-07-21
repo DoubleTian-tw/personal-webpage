@@ -1,15 +1,13 @@
 <template>
-    <div class="block basis-[33%] px-4 pb-20 gs-reveal gs-spin">
+    <div class="gs-reveal gs-spin">
         <div
-            class="content hover:rotate-6 text-left border border-solid border-[--lightGrey] rounded-md p-[30px] capitalize transition-all ease-in-out duration-300">
-            <div class="content-header">
-                <img
-                    class="w-20 h-20 rounded-full shadow-[0_0_10px_var(--lightGrey)] object-cover object-center"
-                    :src="props.imgSrc"
-                    :alt="props.title" />
-                <p class="text-left">{{ props.title }}</p>
+            class="hover:rotate-6 border border-solid border-[--lightGrey] rounded-md p-[30px] capitalize transition-all ease-in-out duration-300">
+            <div class="flex flex-col justify-center items-center">
+                <img class="w-20 h-20 rounded-full shadow-[0_0_10px_var(--lightGrey)] object-cover object-center"
+                    :src="props.imgSrc" :alt="props.title" />
+                <h3>{{ props.title }}</h3>
             </div>
-            <div v-html="props.content"></div>
+            <div class="text-left" v-html="props.content"></div>
         </div>
     </div>
 </template>
