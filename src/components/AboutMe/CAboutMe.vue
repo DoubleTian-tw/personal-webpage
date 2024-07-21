@@ -1,14 +1,9 @@
-<template>
+active<template>
     <!-- About me -->
-    <div
-        id="myBio"
-        class="main-container max-sm:gap-0 gap-24 flex h-auto max-sm:flex-col">
+    <div id="myBio" class="main-container max-lg:gap-0 gap-24 flex h-auto max-lg:flex-col">
         <div class="gs-fromLeft gs-reveal flex-1">
-            <img
-                class="w-full h-[80vh] max-sm:h-[50vh] object-cover object-center"
-                src="@/assets/myBio-image.jpg"
-                alt="This's me"
-                oncontextmenu="return false;" />
+            <img class="w-full h-[80vh] max-lg:h-[50vh] object-cover object-center" src="@/assets/myBio-image.jpg"
+                alt="This's me" oncontextmenu="return false;" />
         </div>
         <div class="flex-1">
             <div class="gs-fromRight gs-reveal pb-7">
@@ -20,8 +15,7 @@
             </div>
 
             <div class="gs-fromLeft gs-reveal text-left">
-                <a
-                    class="bg-lightGreen hover:bg-darkGreen inline-block text-white no-underline py-4 px-7 rounded-[30px] mb-2.5 transition-[background-color] duration-300 ease"
+                <a class="bg-lightGreen hover:bg-darkGreen inline-block text-white no-underline py-4 px-7 rounded-[30px] mb-2.5 transition-[background-color] duration-300 ease"
                     href="https://www.cakeresume.com/s--M7R7Mwc-flIMqXH79MizSw--/paddytian">
                     HIRE ME
                 </a>
