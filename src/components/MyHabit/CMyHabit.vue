@@ -1,6 +1,6 @@
 <template>
     <div id="myHabit" class="main-container flex flex-col justify-center items-center">
-        <div class="container-title gs-reveal">
+        <div class="gs-reveal">
             <h1>Habit</h1>
         </div>
         <div class="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-8">

@@ -128,11 +128,11 @@ const scrollControlNavbar = throttle(() => {
 }
 
 .scrolled {
-    @apply translate-y-0 transition-300-all;
+    @apply translate-y-0 transition-[--transition-all];
 }
 
 .scrollBack {
-    @apply -translate-y-full transition-300-all;
+    @apply -translate-y-full transition-[--transition-all];
 }
 
 .bar {
