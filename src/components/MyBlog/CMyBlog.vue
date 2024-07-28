@@ -1,15 +1,10 @@
 <template>
-    <div
-        id="myBlog"
-        class="main-container flex flex-col justify-center items-center">
-        <div class="container-title gs-reveal">
+    <div id="myBlog" class="main-container flex flex-col justify-center items-center">
+        <div class="gs-reveal">
             <h1>Read my blog</h1>
         </div>
         <div class="gs-reveal w-full">
-            <Article
-                v-for="(blog, index) in blogs"
-                v-bind="blog"
-                :key="index"></Article>
+            <Article v-for="(blog, index) in blogs" v-bind="blog" :key="index"></Article>
         </div>
     </div>
 </template>

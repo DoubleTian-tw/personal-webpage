@@ -12,18 +12,12 @@
             <div class="basis-[60%] max-lg:basis-full pl-20 max-lg:p-0 max-lg:pt-10 gs-reveal gs-fromRight">
                 <div class="mb-12">
                     <h2 class="mt-0 mb-5 font-normal">Work Experience</h2>
-                    <WorkExp
-                        v-for="(exp, index) in experiences"
-                        v-bind="exp"
-                        :key="index"></WorkExp>
+                    <WorkExp v-for="(exp, index) in experiences" v-bind="exp" :key="index"></WorkExp>
                 </div>
 
                 <div class="mb-12">
                     <h2 class="mt-0 mb-5 font-normal">Education</h2>
-                    <WorkExp
-                        v-for="(edu, index) in educations"
-                        v-bind="edu"
-                        :key="index"></WorkExp>
+                    <WorkExp v-for="(edu, index) in educations" v-bind="edu" :key="index"></WorkExp>
                 </div>
             </div>
         </div>

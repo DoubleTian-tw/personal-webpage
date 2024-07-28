@@ -4,19 +4,13 @@
             <div>
                 <h4>Connect</h4>
                 <ul class="flex flex-row p-0">
-                    <Connect
-                        v-for="(connect, index) in connects"
-                        v-bind="connect"
-                        :key="index"></Connect>
+                    <Connect v-for="(connect, index) in connects" v-bind="connect" :key="index"></Connect>
                 </ul>
             </div>
             <div>
                 <h4>Contact</h4>
                 <ul class="flex flex-col text-left">
-                    <Contact
-                        v-for="(contact, index) in contacts"
-                        :key="index"
-                        v-bind="contact"></Contact>
+                    <Contact v-for="(contact, index) in contacts" :key="index" v-bind="contact"></Contact>
                 </ul>
             </div>
         </div>
