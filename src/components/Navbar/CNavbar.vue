@@ -2,10 +2,10 @@
     <nav ref="navbar" class="navbar absolute translate-y-0 flex-wrap top-0 left-0 z-[1] w-full"
         :class="{ scrolled: beenScrolled, scrollBack: beenScrollBack, fixedNavbar: beenFixed }">
         <div class="relative py-6">
-            <div
-                class="logo mx-12 w-7 h-7 bg-[url('@/images/icon-cat.png')] absolute bg-no-repeat bg-contain transition-all duration-500 ease hover:rotate-[30deg] max-lg:static">
-                <a href="#myHome"></a>
-            </div>
+            <a href="#myHome">
+                <img src="@/images/icon-cat.png"
+                    class="mx-12 w-7 h-7 absolute transition-[--transition-all] hover:rotate-[30deg] max-lg:static">
+            </a>
             <ul class="links" :class="{
                 'active': displayLinks,
                 'bg-white text-black': beenScrolled,
