@@ -1,6 +1,6 @@
 <template>
     <li
-        class="filter-btn px-4 py-5 color-lightGrey cursor-pointer transition-300-all hover:color-lightGreen">
+        class="filter-btn px-4 py-5 text-[--lightGrey] cursor-pointer transition-[--transition-all] hover:text-[--lightGreen]">
         {{ props.classification }}
     </li>
 </template>

@@ -5,8 +5,7 @@
             class="flex flex-row justify-between items-center cursor-pointer group">
             <div class="text-left">
                 <span class="text-style">{{ props.date }}</span>
-                <h2
-                    class="font-normal color-darkBlack m-0 group-hover:color-lightGreen transition-colors">
+                <h2 class="font-normal text-[--darkBlack] m-0 group-hover:text-[--lightGreen] transition-colors">
                     {{ props.title }}
                 </h2>
             </div>
@@ -24,6 +23,6 @@ const props = defineProps<ArticleProps>();
 
 <style lang="scss" scoped>
 .text-style {
-    @apply color-lightGrey text-[16px] tracking-[3px] uppercase;
+    @apply text-[--lightGrey] text-[16px] tracking-[3px] uppercase;
 }
 </style>
