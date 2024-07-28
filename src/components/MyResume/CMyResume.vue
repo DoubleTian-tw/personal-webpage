@@ -1,18 +1,15 @@
 <template>
     <div id="myResume" class="main-container">
-        <div class="container-title gs-reveal">
+        <div class="gs-reveal">
             <h1>Resume</h1>
         </div>
-        <div class="flex flex-wrap w-full">
-            <div class="basis-[40%] gs-reveal gs-fromLeft">
-                <img
-                    class="w-full h-[65vh] object-cover"
-                    src="@/assets/myResume-image.jpg"
-                    alt="myResume image"
-                    oncontextmenu="return false;" />
+        <div class="flex flex-wrap w-full flex-row max-lg:flex-col">
+            <div class="basis-[40%] max-lg:basis-full gs-reveal gs-fromLeft">
+                <img class="w-full h-[65vh] max-lg:h-[40vh] max-sm:h-[30vh] object-cover"
+                    src="@/assets/myResume-image.jpg" alt="myResume image" oncontextmenu="return false;" />
             </div>
 
-            <div class="basis-[60%] pl-20 gs-reveal gs-fromRight">
+            <div class="basis-[60%] max-lg:basis-full pl-20 max-lg:p-0 max-lg:pt-10 gs-reveal gs-fromRight">
                 <div class="mb-12">
                     <h2 class="mt-0 mb-5 font-normal">Work Experience</h2>
                     <WorkExp

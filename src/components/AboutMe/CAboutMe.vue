@@ -1,7 +1,7 @@
 active<template>
     <!-- About me -->
     <div id="myBio" class="main-container max-lg:gap-0 gap-24 flex h-auto max-lg:flex-col">
-        <div class="gs-fromLeft gs-reveal flex-1">
+        <div class="gs-fromLeft gs-reveal flex-1 max-lg:mb-5">
             <img class="w-full h-[80vh] max-lg:h-[50vh] object-cover object-center" src="@/assets/myBio-image.jpg"
                 alt="This's me" oncontextmenu="return false;" />
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <footer id="myFooter" class="block bg-[--bgGrey] px-[100px] py-[50px]">
+    <footer id="myFooter" class="block bg-[--bgGrey] p-10">
         <div class="row">
             <div>
                 <h4>Connect</h4>

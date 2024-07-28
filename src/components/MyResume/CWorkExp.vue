@@ -1,30 +1,34 @@
 <template>
-    <div class="workExp cursor-pointer flex justify-between py-5">
-        <div class="detail text-left">
-            <h4 class="mb-5 mt-0 font-normal">{{ props.jobTitle }}</h4>
-            <div class="company">
-                <a class="hyperLink" :href="props.link">
-                    <img src="@/assets/icon-business.png" alt="business icon" />
-                    <span>{{ props.companyName }}</span>
-                </a>
+    <div class="mb-5">
+        <h4>{{ props.jobTitle }}</h4>
+        <a class="cursor-pointer" :href="props.link">
+            <div class="group flex mb-4 justify-between flex-row max-xs:flex-col">
+                <div class="detail text-left max-sm:mb-4">
+                    <div class="company">
+                        <a class="hyperLink group-hover:after:left-0 group-hover:after:w-[95%]" href="">
+                            <img src="@/assets/icon-business.png" alt="business icon" />
+                            <span>{{ props.companyName }}</span>
+                        </a>
+                    </div>
+                    <div class="location">
+                        <img src="@/assets/icon-location.png" alt="location icon" />
+                        <span>{{ props.location }}</span>
+                    </div>
+                </div>
+                <div class="times text-right max-sm:text-left text-sm flex flex-col justify-end">
+                    <span class="fulltime tracking-[3px] text-[--lightGreen] rounded-[30px]">
+                        {{ props.isFulltime ? "FULLTIME" : "PARTTIME" }}
+                    </span>
+                    <div class="calendar text-[--lightGrey]">
+                        <img src="@/assets/icon-calendar.png" alt="calendar icon" />
+                        <span>{{ props.durationDate }}</span>
+                    </div>
+                </div>
             </div>
-            <div class="location">
-                <img src="@/assets/icon-location.png" alt="location icon" />
-                <span>{{ props.location }}</span>
-            </div>
-        </div>
-        <div class="times flex flex-col justify-end text-xs">
-            <span
-                class="text-right pb-2 fulltime tracking-[3px] text-[--workExp-colorGreen] bg-[--work Exp-bgGreen] rounded-[30px]">
-                {{ props.isFulltime ? "FULLTIME" : "PARTTIME" }}
-            </span>
-            <div class="text-right calendar text-[--lightGrey]">
-                <img src="@/assets/icon-calendar.png" alt="calendar icon" />
-                <span>{{ props.durationDate }}</span>
-            </div>
-        </div>
+        </a>
+        <hr />
     </div>
-    <hr />
+
 </template>
 
 <script setup lang="ts">

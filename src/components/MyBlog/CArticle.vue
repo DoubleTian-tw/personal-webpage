@@ -1,9 +1,8 @@
 <template>
     <div class="blog my-5">
-        <a
-            :href="props.link"
-            class="flex flex-row justify-between items-center cursor-pointer group">
-            <div class="text-left">
+        <a :href="props.link"
+            class="flex flex-row max-sm:flex-col max-sm:items-start justify-between items-center cursor-pointer group">
+            <div class="text-left max-sm:mb-4">
                 <span class="text-style">{{ props.date }}</span>
                 <h2 class="font-normal text-[--darkBlack] m-0 group-hover:text-[--lightGreen] transition-colors">
                     {{ props.title }}

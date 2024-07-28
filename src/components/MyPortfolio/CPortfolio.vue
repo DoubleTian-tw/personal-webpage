@@ -7,7 +7,7 @@
             </a>
         </div>
         <div
-            class="description overflow-hidden h-0 w-full text-center absolute top-[95%] bg-[--bgGrey] group-hover:h-[auto] z-[998] rounded-b-xl shadow-[0_0_10px_var(--lightGrey)] transition-[--transition-all_300]">
+            class="description overflow-hidden origin-top scale-y-0 h-[auto] w-full text-center absolute top-[95%] bg-[--bgGrey] group-hover:scale-y-100 z-[998] rounded-b-xl shadow-[0_0_10px_var(--lightGrey)] transition-[--transition-all]">
             <h4 class="relative left-0 mx-3 my-2 createLine">
                 {{ props.name }}
             </h4>
@@ -24,7 +24,7 @@ const props = defineProps<portfolioProps>();
 
 <style scoped lang="scss">
 .createLine::after {
-    @apply content-[''] absolute -bottom-[10%] left-1/2 w-0 h-[2px] bg-black transition-[all_800_ease];
+    @apply content-[''] absolute -bottom-[10%] left-1/2 w-0 h-[2px] bg-black transition-[all] duration-500 ease-in-out;
 }
 
 .group:hover .createLine::after {
