@@ -12,6 +12,7 @@
         <MyBlog></MyBlog>
     </main>
     <Footer></Footer>
+    <div ref="observerTarget" class="observer-target"></div>
     <Transition>
         <GoBack v-if="displayGoBackIcon"></GoBack>
     </Transition>
@@ -27,25 +28,33 @@ import MyResume from "@/components/MyResume/CMyResume.vue";
 import MyBlog from "@/components/MyBlog/CMyBlog.vue";
 import Footer from "@/components/Footer/CFooter.vue";
 import GoBack from "@/components/CGoBack.vue";
-import { computed, onMounted, onUnmounted, ref } from "vue";
-import { throttle } from "lodash-es";
+import { onMounted, onUnmounted, ref } from "vue";
 
-const scrollY = ref<number>(0);
-const viewThirdHeight = computed<number>(() => window.innerHeight / 3)
-const displayGoBackIcon = computed<boolean>(() => scrollY.value > viewThirdHeight.value)
+const observerTarget = ref<HTMLElement | null>(null);
+const displayGoBackIcon = ref(false);
+
+// 創建 Intersection Observer
+const observer = new IntersectionObserver(
+    (entries) => {
+        // 當觀察點元素不可見時（滾動超過頁面1/3），顯示回到頂部按鈕
+        displayGoBackIcon.value = !entries[0].isIntersecting;
+    },
+    {
+        // 設置觀察點在視窗 1/3 處
+        rootMargin: '33% 0px 0px 0px',
+        threshold: 0
+    }
+);
 
 onMounted(() => {
-    window.addEventListener('scroll', scroller)
-})
+    if (observerTarget.value) {
+        observer.observe(observerTarget.value);
+    }
+});
 
 onUnmounted(() => {
-    window.removeEventListener('scroll', scroller)
-})
-const scroller = throttle(() => {
-    scrollY.value = window.scrollY
-}, 300)
-
-
+    observer.disconnect();
+});
 </script>
 
 <style lang="scss" scoped>
@@ -57,5 +66,15 @@ const scroller = throttle(() => {
 .v-enter-from,
 .v-leave-to {
     @apply translate-y-20 opacity-0;
+}
+
+.observer-target {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    opacity: 0;
 }
 </style>
