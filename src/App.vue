@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import Header from "@/components/CHeader.vue";
-import NavBar from "@/components/Navbar/CNavbar.vue";
+import NavBar from "@/components/Navbar/index.vue";
 import AboutMe from "@/components/AboutMe/CAboutMe.vue";
 import MyPortfolio from "@/components/MyPortfolio/CMyPortfolio.vue";
 import MyHabit from "@/components/MyHabit/CMyHabit.vue";
