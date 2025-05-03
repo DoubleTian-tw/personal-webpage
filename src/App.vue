@@ -23,7 +23,7 @@ import Home from "@/components/Home/index.vue";
 import NavBar from "@/components/Navbar/index.vue";
 import AboutMe from "@/components/AboutMe/index.vue";
 import MyPortfolio from "@/components/MyPortfolio/index.vue";
-import MyHabit from "@/components/MyHabit/CMyHabit.vue";
+import MyHabit from "@/components/MyHabit/index.vue";
 import MyResume from "@/components/MyResume/CMyResume.vue";
 import MyBlog from "@/components/MyBlog/CMyBlog.vue";
 import Footer from "@/components/Footer/CFooter.vue";

@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import Card from "./CCard.vue";
+import Card from "./HabitCard.vue";
 import { ref } from "vue";
 import { CardProps } from "./interface";
 import imgDancing from "@/assets/myHabit-dancing.png";
