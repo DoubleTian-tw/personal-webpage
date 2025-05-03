@@ -17,8 +17,8 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import Classification from "./CClassification.vue";
-import Portfolio from "./CPortfolio.vue";
+import Classification from "./Classification.vue";
+import Portfolio from "./Portfolio.vue";
 import { uniqBy } from "lodash-es";
 import { classificationProps, portfolioProps } from "./interface";
 import seniorProject from "@/assets/portfolio-senior-project.jpg";
