@@ -1,4 +1,4 @@
-active<template>
+<template>
     <!-- About me -->
     <div id="myBio" class="main-container max-lg:gap-0 gap-24 flex h-auto max-lg:flex-col">
         <div class="gs-fromLeft gs-reveal flex-1 max-lg:mb-5">
@@ -25,7 +25,7 @@ active<template>
 </template>
 
 <script setup lang="ts">
-import Skill from "./CSkill.vue";
+import Skill from "./Skill.vue";
 import { ref } from "vue";
 import { SkillProps } from "./interface";
 const skills = ref<SkillProps[]>([

@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import Home from "@/components/Home/index.vue";
 import NavBar from "@/components/Navbar/index.vue";
-import AboutMe from "@/components/AboutMe/CAboutMe.vue";
+import AboutMe from "@/components/AboutMe/index.vue";
 import MyPortfolio from "@/components/MyPortfolio/CMyPortfolio.vue";
 import MyHabit from "@/components/MyHabit/CMyHabit.vue";
 import MyResume from "@/components/MyResume/CMyResume.vue";
