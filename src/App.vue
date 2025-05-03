@@ -14,7 +14,7 @@
     <Footer></Footer>
     <div ref="observerTarget" class="observer-target"></div>
     <Transition>
-        <GoBack v-if="displayGoBackIcon"></GoBack>
+        <BackToHome v-if="displayGoBackIcon" />
     </Transition>
 </template>
 
@@ -27,7 +27,7 @@ import MyHabit from "@/components/MyHabit/CMyHabit.vue";
 import MyResume from "@/components/MyResume/CMyResume.vue";
 import MyBlog from "@/components/MyBlog/CMyBlog.vue";
 import Footer from "@/components/Footer/CFooter.vue";
-import GoBack from "@/components/CGoBack.vue";
+import BackToHome from "@/components/BackToHome/index.vue";
 import { onMounted, onUnmounted, ref } from "vue";
 
 const observerTarget = ref<HTMLElement | null>(null);
