@@ -12,12 +12,12 @@
             <div class="basis-[60%] max-lg:basis-full pl-20 max-lg:p-0 max-lg:pt-10 gs-reveal gs-fromRight">
                 <div class="mb-12">
                     <h2 class="mt-0 mb-5 font-normal">Work Experience</h2>
-                    <WorkExp v-for="(exp, index) in experiences" v-bind="exp" :key="index"></WorkExp>
+                    <ExpSection v-for="(exp, index) in experiences" v-bind="exp" :key="index"></ExpSection>
                 </div>
 
                 <div class="mb-12">
                     <h2 class="mt-0 mb-5 font-normal">Education</h2>
-                    <WorkExp v-for="(edu, index) in educations" v-bind="edu" :key="index"></WorkExp>
+                    <ExpSection v-for="(edu, index) in educations" v-bind="edu" :key="index"></ExpSection>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import WorkExp from "./CWorkExp.vue";
+import ExpSection from "./ExperienceSection.vue";
 import { ExpProps } from "./interface";
 const experiences = ref<ExpProps[]>([
     {
