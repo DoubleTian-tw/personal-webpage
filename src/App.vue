@@ -1,7 +1,7 @@
 <template>
     <!-- TODO: GPAS追加 -->
     <div id="myHome" class="relative w-full h-screen">
-        <Header></Header>
+        <Home></Home>
         <NavBar></NavBar>
     </div>
     <main>
@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import Header from "@/components/CHeader.vue";
+import Home from "@/components/Home/index.vue";
 import NavBar from "@/components/Navbar/index.vue";
 import AboutMe from "@/components/AboutMe/CAboutMe.vue";
 import MyPortfolio from "@/components/MyPortfolio/CMyPortfolio.vue";
