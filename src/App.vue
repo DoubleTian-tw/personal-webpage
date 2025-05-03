@@ -26,7 +26,7 @@ import MyPortfolio from "@/components/MyPortfolio/index.vue";
 import MyHabit from "@/components/MyHabit/index.vue";
 import MyResume from "@/components/MyResume/index.vue";
 import MyBlog from "@/components/MyBlog/index.vue";
-import Footer from "@/components/Footer/CFooter.vue";
+import Footer from "@/components/Footer/index.vue";
 import BackToHome from "@/components/BackToHome/index.vue";
 import { onMounted, onUnmounted, ref } from "vue";
 

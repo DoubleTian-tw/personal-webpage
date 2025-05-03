@@ -31,8 +31,8 @@ import icon_instagram from "@/assets/icon-socialMedia-instagram.png";
 import icon_location from "@/assets/icon-location-black.png";
 import icon_telephone from "@/assets/icon-telephone.png";
 import icon_mail from "@/assets/icon-mail.png";
-import Connect from "./CConnect.vue";
-import Contact from "./CContact.vue";
+import Connect from "./ConnectSection.vue";
+import Contact from "./ContactSection.vue";
 const connects = ref<ConnectProps[]>([
     {
         link: "https://github.com/DoubleTian-tw",
