@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import Article from "./CArticle.vue";
+import Article from "./ArticleSection.vue";
 import { ArticleProps } from "./interface";
 const blogs = ref<ArticleProps[]>([
     {
